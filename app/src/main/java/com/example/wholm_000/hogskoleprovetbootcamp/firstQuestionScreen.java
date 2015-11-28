@@ -174,6 +174,13 @@ public class firstQuestionScreen extends AppCompatActivity {
                     }
                 }
             }
+
+            if(mode.equals("kva")){
+                for(int i = 0; i < correctAnsPos.length; i++){
+                    correctAnsPos[i] -= 2;
+                }
+            }
+
         }
         setQuestionsAndAnswers();
 
@@ -665,7 +672,9 @@ public class firstQuestionScreen extends AppCompatActivity {
         switch(item.getItemId()){
             case android.R.id.home:
                 this.finish();
-                return true;
+                Intent intent = new Intent(this, kvantitativDel.class);
+
+                startActivity(intent);
             default:
                 return super.onOptionsItemSelected(item);
         }

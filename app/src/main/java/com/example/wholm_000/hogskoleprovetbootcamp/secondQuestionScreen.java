@@ -391,7 +391,10 @@ public class secondQuestionScreen extends AppCompatActivity {
         switch(item.getItemId()){
             case android.R.id.home:
                 this.finish();
-                return true;
+                this.finish();
+                Intent intent = new Intent(this, kvantitativDel.class);
+
+                startActivity(intent);
             default:
                 return super.onOptionsItemSelected(item);
         }

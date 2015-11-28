@@ -87,7 +87,9 @@ public class kvantitativDel extends AppCompatActivity {
         switch(item.getItemId()){
             case android.R.id.home:
                 this.finish();
-                return true;
+                Intent intent = new Intent(this, startScreen.class);
+
+                startActivity(intent);
             default:
                 return super.onOptionsItemSelected(item);
         }
