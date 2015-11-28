@@ -1,0 +1,12 @@
+<resources>
+    <string name="Hello">Hello, world</string>
+    <string name="app_name">Hogskoleprovet BootCamp</string>
+    <string name="action_settings">Settings</string>
+    <string name="startQuizButton">XYZ</string>
+    <string name="title">Högskoleprovet Träning</string>
+    <string name="warningText">Please select an answer.</string>
+    <string name="nextQuestion">Nästa</string>
+    <string name="prevQuestion">Föregående</string>
+    <string name="notes">Anteckningar</string>
+    <string name="spaces">"        "</string>
+</resources>

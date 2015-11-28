@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scrollViewQ"
+        android:id="@+id/scrollView3"
+        android:layout_gravity="center_horizontal" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="2. Vad är det här för text"
+                android:id="@+id/question"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/radioGroupMarginTop">
+
+        <RadioButton
+            android:layout_width="@dimen/rb_width"
+            android:layout_height="wrap_content"
+            android:text="New RadioButton"
+            android:id="@+id/radioB1"
+            android:checked="false"
+            android:layout_margin="@dimen/rbmargin"/>
+
+        <RadioButton
+            android:layout_width="@dimen/rb_width"
+            android:layout_height="wrap_content"
+            android:text="New RadioButton"
+            android:id="@+id/radioB2"
+            android:checked="false"
+            android:layout_margin="@dimen/rbmargin"/>
+
+        <RadioButton
+            android:layout_width="@dimen/rb_width"
+            android:layout_height="wrap_content"
+            android:text="New RadioButton"
+            android:id="@+id/radioB3"
+            android:checked="false"
+            android:layout_margin="@dimen/rbmargin"/>
+
+        <RadioButton
+            android:layout_width="@dimen/rb_width"
+            android:layout_height="wrap_content"
+            android:text="New RadioButton"
+            android:id="@+id/radioB4"
+            android:checked="false"
+            android:layout_margin="@dimen/rbmargin"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 / 10"
+        android:id="@+id/questionNumber2"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="@string/nextQuestion"
+        android:id="@+id/nextQuestion"
+        android:layout_gravity="center_horizontal"
+        android:onClick="nextQuestion"/>
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="@string/prevQuestion"
+        android:id="@+id/button9"
+        android:layout_gravity="center_horizontal"
+        android:onClick="goToPreviousQuestion"/>
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="@string/notes"
+        android:id="@+id/button10"
+        android:layout_gravity="center_horizontal"
+        android:onClick="gotoNotes"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/warningText2"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#FF0000"/>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+Ett mynt kastas två gånger.
+Kvantitet I: Sannolikheten att samma sida hamnar uppåt i de två kasten
+Kvantitet II: Sannolikheten att olika sidor hamnar uppåt i de två kasten
+I är större än II
+II är större än I
+I är lika med II
+informationen är otillräcklig
+I är lika med II
+no
+na
+
+Kvantitet I: 0,99^99
+Kvantitet II: 1,1^11
+I är större än II
+II är större än I
+I är lika med II
+informationen är otillräcklig
+II är större än I
+no
+na
+x = y + z + w | w = z + y + x
+Kvantitet I: y
+Kvantitet II: z
+I är större än II
+II är större än I
+I är lika med II
+informationen är otillräcklig
+informationen är otillräcklig
+no
+na
+x > 1
+Kvantitet I: (x^3)^2
+Kvantitet II: x^5
+I är större än II
+II är större än I
+I är lika med II
+informationen är otillräcklig
+I är större än II
+no
+na

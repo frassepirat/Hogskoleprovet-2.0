@@ -1,0 +1,32 @@
+Linjerna L1 och L2 skär varandra så att vinkeln a ≠ 90°. Vilket svarsalternativ är med säkerhet korrekt?
+2a + b - c = 180°
+b - a = 90°
+2d + c - a = 180°
+a + c = 90°
+2a + b - c = 180°
+yes
+hspxyz1
+Vad är (2,1 * 10^3) * (3,9 * 10^3)
+7,19 * 10^6
+8,19 * 10^6
+7,19 * 10^9
+8,19 * 10^9
+8,19 * 10^6
+no
+na
+Sidan i kvadraten K1 är x + y och sidan i kvadraten K2 är x. Vad är differensen mellan areorna av K1 och K2?
+x^2 - y^2
+(y-x)^2
+y^2
+2xy - y^2
+x^2 - y^2
+no
+na
+Vad är 1 + 16?
+15
+14
+13
+17
+17
+no
+na
