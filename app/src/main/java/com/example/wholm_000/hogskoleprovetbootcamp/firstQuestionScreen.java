@@ -27,7 +27,7 @@ public class firstQuestionScreen extends AppCompatActivity {
 
 
     private int queNumber = 1;
-    private String[][] answers = new String[10][8];
+    private String[][] answers = new String[10][9];
     private int numOfQuestions = 0;
     private int[] orderOfQuestions;
     private int[] questionChoices;
@@ -48,7 +48,7 @@ public class firstQuestionScreen extends AppCompatActivity {
 
         InputStream is = getResources().openRawResource(R.raw.xyzquestions);
 
-        int numLinesInTxt = 8;
+        int numLinesInTxt = 9;
         int minAnsRange = 1;
         int maxAnsRange = 5;
 
@@ -441,6 +441,21 @@ public class firstQuestionScreen extends AppCompatActivity {
 
         startActivityForResult(goToNotes, result);
     }
+    public void getToAbout2(View view) {
+        Intent goToNotes = new Intent(this, aboutQuestion.class);
+
+        int result = 1;
+
+        Bundle bundle = new Bundle();
+
+        bundle.putSerializable("answersArray", answers);
+        goToNotes.putExtra("answerBundle", bundle);
+        goToNotes.putExtra("orderOfQuestions", orderOfQuestions);
+        goToNotes.putExtra("questionNumber", queNumber);
+        goToNotes.putExtra("mode", mode);
+
+        startActivityForResult(goToNotes, result);
+    }
 
     public void prevQuestion(View view) {
 
@@ -679,5 +694,4 @@ public class firstQuestionScreen extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
 }

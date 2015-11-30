@@ -33,6 +33,10 @@
             />
         <activity android:name=".notes"
             android:label="Anteckningar"
+            android:theme="@style/noAnimTheme"
+            />
+        <activity android:name=".aboutQuestion"
+            android:label="Om Frågan"
             android:theme="@style/noAnimTheme"/>
 
     </application>

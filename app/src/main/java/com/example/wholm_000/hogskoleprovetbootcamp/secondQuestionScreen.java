@@ -209,6 +209,21 @@ public class secondQuestionScreen extends AppCompatActivity {
         startActivityForResult(goToNotes, result);
 
     }
+    public void getToAbout(View view) {
+        Intent goToNotes = new Intent(this, aboutQuestion.class);
+
+        int result = 1;
+
+        Bundle bundle = new Bundle();
+
+        bundle.putSerializable("answersArray", answers);
+        goToNotes.putExtra("answerBundle", bundle);
+        goToNotes.putExtra("orderOfQuestions", orderOfQuestions);
+        goToNotes.putExtra("questionNumber", Integer.parseInt(questionNum));
+        goToNotes.putExtra("mode", mode);
+
+        startActivityForResult(goToNotes, result);
+    }
 
     public void setQuestionsAndAnswers(){
 

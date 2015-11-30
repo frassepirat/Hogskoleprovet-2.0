@@ -93,13 +93,26 @@
         android:layout_gravity="center_horizontal"
         android:onClick="prevQuestion"/>
 
-    <Button
-        android:layout_width="130dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/notes"
-        android:id="@+id/button8"
-        android:layout_gravity="center_horizontal"
-        android:onClick="getToNotes"/>
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <Button
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="Note"
+            android:id="@+id/notes"
+            android:layout_gravity="center_horizontal"
+            android:onClick="gettoNotes"/>
+        <Button
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="Om"
+            android:id="@+id/aboutQuestion2"
+            android:layout_gravity="center"
+            android:onClick="getToAbout2"/>
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"

@@ -79,7 +79,7 @@
         android:layout_gravity="center_horizontal" />
 
     <Button
-        android:layout_width="130dp"
+        android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:text="@string/nextQuestion"
         android:id="@+id/nextQuestion"
@@ -87,20 +87,33 @@
         android:onClick="nextQuestion"/>
 
     <Button
-        android:layout_width="130dp"
+        android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:text="@string/prevQuestion"
         android:id="@+id/button9"
         android:layout_gravity="center_horizontal"
         android:onClick="goToPreviousQuestion"/>
-
-    <Button
-        android:layout_width="130dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/notes"
-        android:id="@+id/button10"
-        android:layout_gravity="center_horizontal"
-        android:onClick="gotoNotes"/>
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <Button
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="Note"
+            android:id="@+id/button10"
+            android:layout_gravity="center_horizontal"
+            android:onClick="gotoNotes"/>
+        <Button
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="Om"
+            android:id="@+id/aboutQuestion"
+            android:layout_gravity="center"
+            android:onClick="getToAbout"/>
+    </LinearLayout>
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -108,5 +121,6 @@
         android:id="@+id/warningText2"
         android:layout_gravity="center_horizontal"
         android:textColor="#FF0000"/>
+
 
 </LinearLayout>

@@ -1,37 +1,27 @@
 package com.example.wholm_000.hogskoleprovetbootcamp;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-
 /**
- * Created by Wholm_000 on 2015-11-19.
+ * Created by Wholm_000 on 2015-11-28.
  */
-public class notes extends AppCompatActivity {
+public class aboutQuestion extends AppCompatActivity {
 
     String mode = "xyz";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.notes_screen);
+        setContentView(R.layout.about_question);
+
 
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -47,43 +37,15 @@ public class notes extends AppCompatActivity {
         mode = intent.getStringExtra("mode");
 
         setQuestion(questionNum, answers, orderOfQuestions);
-
-
-
-        try {
-            InputStream in = openFileInput("anteckningarXYZ.txt");
-            if(in != null) {
-                InputStreamReader tmp = new InputStreamReader(in);
-
-                BufferedReader br = new BufferedReader(tmp);
-
-                EditText textEditor = (EditText) findViewById(R.id.editText);
-                StringBuilder stringBuilder = new StringBuilder();
-                String fullString;
-                String checker;
-
-                while ((checker = br.readLine()) != null) {
-                    stringBuilder.append(checker);
-                }
-
-                in.close();
-
-                fullString = stringBuilder.toString();
-                textEditor.setText(fullString);
-            }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
     }
 
+
+
+
     public void setQuestion(int questionNum, String[][] answers, int[] orderOfQuestions){
-        ImageView img = (ImageView) findViewById(R.id.imageViewNote);
-        TextView tx1 = (TextView) findViewById(R.id.questionNote);
+        ImageView img = (ImageView) findViewById(R.id.aboutImageView);
+        TextView tx1 = (TextView) findViewById(R.id.aboutTextView);
+        TextView tx2 = (TextView) findViewById(R.id.aboutTextViewHow);
 
         //TODO: fix
         if(mode.equals("xyz")) {
@@ -93,6 +55,7 @@ public class notes extends AppCompatActivity {
             } else{
                 img.setBackgroundResource(0);
             }
+            tx2.setText(answers[orderOfQuestions[questionNum - 1]][8]);
         } else if(mode.equals("kva")){
             tx1.setText(questionNum + ". " + answers[orderOfQuestions[questionNum - 1]][0]
                     + "\n\n" + answers[orderOfQuestions[questionNum - 1]][1]
@@ -104,22 +67,7 @@ public class notes extends AppCompatActivity {
             }
         }
     }
-
-    public void goBack(View view) {
-
-        String STORETEXT = "anteckningarXYZ.txt";
-        EditText textEditor = (EditText) findViewById(R.id.editText);
-        try {
-            OutputStreamWriter out = new OutputStreamWriter(openFileOutput(STORETEXT, 0));
-            out.write(textEditor.getText().toString());
-            out.close();
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+    public void goBack2(View view) {
 
         Intent goingBack = new Intent();
         setResult(RESULT_OK, goingBack);
