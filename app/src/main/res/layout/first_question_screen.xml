@@ -29,7 +29,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageViewFirst" />
+                android:id="@+id/imageViewFirst"/>
         </LinearLayout>
     </ScrollView>
 
@@ -104,7 +104,7 @@
             android:text="Note"
             android:id="@+id/notes"
             android:layout_gravity="center_horizontal"
-            android:onClick="gettoNotes"/>
+            android:onClick="getToNotes"/>
         <Button
             android:layout_width="65dp"
             android:layout_height="wrap_content"

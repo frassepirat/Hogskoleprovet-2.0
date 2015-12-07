@@ -22,7 +22,6 @@ public class aboutQuestion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.about_question);
 
-
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 

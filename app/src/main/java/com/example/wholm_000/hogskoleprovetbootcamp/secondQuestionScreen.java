@@ -48,6 +48,7 @@ public class secondQuestionScreen extends AppCompatActivity {
         questionChoices = intent.getExtras().getIntArray("questionChoices");
         correctAnsPos = intent.getIntArrayExtra("correctAnswers");
         mode = intent.getStringExtra("mode");
+        orderOfQuestions = intent.getIntArrayExtra("orderArray");
 
         numOfQuestions = intent.getIntExtra("numberOfQuestions", 0);
 
@@ -56,15 +57,42 @@ public class secondQuestionScreen extends AppCompatActivity {
             finishButton.setText("Avsluta");
         }
         //finish Quiz.
-        if(intent.getStringExtra("screen") != null){
+        if (Integer.parseInt(questionNum) > numOfQuestions) {
+
+            Intent checkScore = new Intent(this, firstQuestionScreen.class);
+
+            checkScore.putExtra("questionNumber", Integer.toString(Integer.parseInt(questionNum) - 1));
+            checkScore.putExtra("numberOfQuestions", numOfQuestions);
+            checkScore.putExtra("questionChoices", questionChoices);
+            checkScore.putExtra("loadLastQuestion", true);
+            checkScore.putExtra("numberOfQuestions", numOfQuestions);
+            Bundle bundle2 = new Bundle();
+            bundle2.putSerializable("answersArray", answers);
+            checkScore.putExtra("answerBundle", bundle2);
+            checkScore.putExtra("orderArray", orderOfQuestions);
+            checkScore.putExtra("correctAnswers", correctAnsPos);
+            checkScore.putExtra("mode", mode);
+            checkScore.putExtra("screen", "score");
+
+            startActivity(checkScore);
+
+            finish();
+
+        }else if(intent.getStringExtra("screen") != null){
             screen = intent.getStringExtra("screen");
-            orderOfQuestions = intent.getIntArrayExtra("orderArray");
 
             RadioButton rb1 = (RadioButton) findViewById(R.id.radioB1);
             RadioButton rb2 = (RadioButton) findViewById(R.id.radioB2);
             RadioButton rb3 = (RadioButton) findViewById(R.id.radioB3);
             RadioButton rb4 = (RadioButton) findViewById(R.id.radioB4);
 
+            /*int qn = Integer.parseInt(questionNum);
+
+            if(qn >= questionChoices.length){
+                qn--;
+            }
+            questionNum = Integer.toString(qn);
+*/
             switch (questionChoices[Integer.parseInt(questionNum)]){
                 case 1:
                     rb1.setChecked(true);
@@ -83,24 +111,6 @@ public class secondQuestionScreen extends AppCompatActivity {
             }
             setImageToMode();
             setQuestionsAndAnswers();
-        } else if (Integer.parseInt(questionNum) > numOfQuestions) {
-
-            Intent goToStartScreen = new Intent(this, kvantitativDel.class);
-
-            int numOfCorrect = 0;
-
-            for(int i = 0; i < numOfQuestions; i++){
-                if(questionChoices[i + 1] == correctAnsPos[i]){
-                    numOfCorrect++;
-                }
-            }
-            goToStartScreen.putExtra("numQuestions", numOfQuestions);
-            goToStartScreen.putExtra("correctAnswers", numOfCorrect);
-
-            startActivity(goToStartScreen);
-
-            finish();
-
         } else {
 
             TextView displayScore = (TextView) findViewById(R.id.warningText2);
@@ -240,7 +250,7 @@ public class secondQuestionScreen extends AppCompatActivity {
 
         setQuestionNumber.setText(queNumber + " / " + numOfQuestions);
 
-        if(mode.equals("kva")) {
+        if(mode.equals("kva") || mode.equals("nog")) {
             setQuestion.setText(Integer.toString(queNumber) + ". " + answers[orderOfQuestions[queNumber - 1]][0]
                     + "\n\n" + answers[orderOfQuestions[queNumber - 1]][1]
                     + "\n\n" + answers[orderOfQuestions[queNumber - 1]][2]);
@@ -249,6 +259,13 @@ public class secondQuestionScreen extends AppCompatActivity {
             rb2.setText("B" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][4]);
             rb3.setText("C" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][5]);
             rb4.setText("D" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][6]);
+
+            if(mode.equals("nog")){
+                //RadioButton rb5 = (RadioButton) findViewById(R.id.radioB5);
+                //rb5.setText("E" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][7]);
+            }
+
+
         } else if(mode.equals("xyz")){
             setQuestion.setText(Integer.toString(queNumber) + ". " + answers[orderOfQuestions[queNumber - 1]][0]);
 
@@ -270,7 +287,7 @@ public class secondQuestionScreen extends AppCompatActivity {
             rb3.setTextColor(Color.WHITE);
             rb4.setTextColor(Color.WHITE);
 
-            if(mode.equals("kva")){
+            if(mode.equals("kva") || mode.equals("nog")){
                 if(rb1.isChecked()){
                     rb1.setBackgroundColor(Color.RED);
                     rb1.setTextColor(Color.BLACK);
@@ -291,6 +308,12 @@ public class secondQuestionScreen extends AppCompatActivity {
                 String ans3 = answers[orderOfQuestions[queNumber - 1]][5];
                 String ans4 = answers[orderOfQuestions[queNumber - 1]][6];
 
+                if(mode.equals("nog")){
+                    //RadioButton rb5 = (RadioButton) findViewById(R.id.radioB5);
+                    String ans5 = answers[orderOfQuestions[queNumber - 1]][7];
+                    que = answers[orderOfQuestions[queNumber - 1]][8];
+                }
+
                 if(ans1.equals(que)){
                     rb1.setBackgroundColor(Color.GREEN);
                     rb1.setTextColor(Color.BLACK);
@@ -304,6 +327,17 @@ public class secondQuestionScreen extends AppCompatActivity {
                     rb4.setBackgroundColor(Color.GREEN);
                     rb4.setTextColor(Color.BLACK);
                 }
+
+                if(mode.equals("nog")){
+                    /*if(ans5.equals(que)){
+                        rb5.setBackgroundColor(Color.GREEN);
+                        rb5.setTextColor(Color.BLACK);
+                    }
+                    rb5.setClickable(false);
+                    */
+
+                }
+
                 rb1.setClickable(false);
                 rb2.setClickable(false);
                 rb3.setClickable(false);

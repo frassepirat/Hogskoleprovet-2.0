@@ -18,7 +18,7 @@
         android:text="Kvantitativ"
         android:id="@+id/button4"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="165dp"
+        android:layout_marginTop="135dp"
         android:onClick="goToKvantitativ"/>
 
     <Button

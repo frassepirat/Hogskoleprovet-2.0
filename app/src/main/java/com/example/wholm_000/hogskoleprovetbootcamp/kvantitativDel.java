@@ -48,7 +48,7 @@ public class kvantitativDel extends AppCompatActivity {
     }
     public void gotoQuizxyz(View view) {
 
-        Intent getNameScreenIntent = new Intent(this, firstQuestionScreen.class);
+        Intent getNameScreenIntent = new Intent(this, antalFragor.class);
 
         final int result = 1;
 
@@ -58,7 +58,7 @@ public class kvantitativDel extends AppCompatActivity {
 
     }
     public void gotoQuizkva(View view) {
-        Intent getNameScreenIntent = new Intent(this, firstQuestionScreen.class);
+        Intent getNameScreenIntent = new Intent(this, antalFragor.class);
 
         final int result = 1;
 
@@ -66,6 +66,15 @@ public class kvantitativDel extends AppCompatActivity {
 
         startActivityForResult(getNameScreenIntent, result);
 
+    }
+    public void gotoQuiznog(View view) {
+        Intent getNameScreenIntent = new Intent(this, antalFragor.class);
+
+        final int result = 1;
+
+        getNameScreenIntent.putExtra("mode", "nog");
+
+        startActivityForResult(getNameScreenIntent, result);
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -94,6 +103,7 @@ public class kvantitativDel extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
 
 
 }

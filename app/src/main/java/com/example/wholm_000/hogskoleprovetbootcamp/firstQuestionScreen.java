@@ -27,14 +27,13 @@ public class firstQuestionScreen extends AppCompatActivity {
 
 
     private int queNumber = 1;
-    private String[][] answers = new String[10][9];
+    private String[][] answers = new String[100][9];
     private int numOfQuestions = 0;
     private int[] orderOfQuestions;
     private int[] questionChoices;
     private int[] correctAnsPos;
     private String mode = "xyz";
     private String screen = "play";
-    private boolean finish = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,23 +93,31 @@ public class firstQuestionScreen extends AppCompatActivity {
             setQuestionsAndAnswers();
             //setImageToMode();
         } else {
-
             if (mode.equals("xyz")) {
                 is = getResources().openRawResource(R.raw.xyzquestions);
             } else if (mode.equals("kva")) {
-                answers = new String[10][10];
+                answers = new String[100][10];
                 numLinesInTxt = 10;
                 minAnsRange = 3;
                 maxAnsRange = 7;
                 is = getResources().openRawResource(R.raw.kvaquestions);
+            } else if(mode.equals("nog")){
+                answers = new String[100][11];
+                numLinesInTxt = 11;
+                minAnsRange = 3;
+                maxAnsRange = 8;
+                is = getResources().openRawResource(R.raw.nogquestions);
+
             }
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
             StringBuilder out = new StringBuilder();
             String line;
 
+            int numOfQuestionsToRead = intent.getIntExtra("numOfQuestionsToRead", 1);
+
             try {
-                for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < numOfQuestionsToRead; i++) {
                     for (int j = 0; j < numLinesInTxt; j++) {
                         answers[i][j] = reader.readLine();
                     }
@@ -175,7 +182,7 @@ public class firstQuestionScreen extends AppCompatActivity {
                 }
             }
 
-            if(mode.equals("kva")){
+            if(mode.equals("kva") || mode.equals("nog")){
                 for(int i = 0; i < correctAnsPos.length; i++){
                     correctAnsPos[i] -= 2;
                 }
@@ -309,23 +316,7 @@ public class firstQuestionScreen extends AppCompatActivity {
                 queNumber = data.getIntExtra("questionNumber", 0);
                 questionChoices = data.getIntArrayExtra("questionChoices");
 
-                if (queNumber > numOfQuestions && finish == true) {
-                    Intent goToStartScreen = new Intent(this, kvantitativDel.class);
-
-                    int numOfCorrect = 0;
-
-                    for(int i = 0; i < numOfQuestions; i++){
-                        if(questionChoices[i + 1] == correctAnsPos[i]){
-                            numOfCorrect++;
-                        }
-                    }
-                    goToStartScreen.putExtra("numQuestions", numOfQuestions);
-                    goToStartScreen.putExtra("correctAnswers", numOfCorrect);
-
-                    setResult(RESULT_OK, goToStartScreen);
-
-                    finish();
-                }else if(queNumber > numOfQuestions) {
+                if(queNumber > numOfQuestions) {
                     Intent checkScore = new Intent(this, firstQuestionScreen.class);
 
                     checkScore.putExtra("questionNumber", Integer.toString(queNumber - 1));
@@ -536,6 +527,12 @@ public class firstQuestionScreen extends AppCompatActivity {
             } else {
                 img.setBackgroundResource(0);
             }
+        } else if(mode.equals("nog")){
+            if (answers[orderOfQuestions[queNumber - 1]][9].equals("yes")) {
+                img.setBackgroundResource(getResources().getIdentifier(answers[orderOfQuestions[queNumber - 1]][10], "drawable", getPackageName()));
+            } else {
+                img.setBackgroundResource(0);
+            }
         }
     }
     public void setQuestionsAndAnswers(){
@@ -566,6 +563,19 @@ public class firstQuestionScreen extends AppCompatActivity {
             rb2.setText("B" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][2]);
             rb3.setText("C" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][3]);
             rb4.setText("D" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][4]);
+        } else if(mode.equals("nog")){
+            setQuestion.setText(Integer.toString(queNumber) + ". " + answers[orderOfQuestions[queNumber - 1]][0]
+                    + "\n\n" + answers[orderOfQuestions[queNumber - 1]][1]
+                    + "\n\n" + answers[orderOfQuestions[queNumber - 1]][2]);
+
+            rb1.setText("A" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][3]);
+            rb2.setText("B" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][4]);
+            rb3.setText("C" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][5]);
+            rb4.setText("D" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][6]);
+
+            //RadioButton rb5 = (RadioButton) findViewById(R.id.radioButton5);
+
+            //rb5.setText("E" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][7]);
         }
         if(screen.equals("score")){
 
@@ -580,7 +590,7 @@ public class firstQuestionScreen extends AppCompatActivity {
             rb3.setTextColor(Color.WHITE);
             rb4.setTextColor(Color.WHITE);
 
-            if(mode.equals("kva")){
+            if(mode.equals("kva") || mode.equals("nog")){
 
                 if(rb1.isChecked()){
                     rb1.setBackgroundColor(Color.RED);
@@ -603,6 +613,13 @@ public class firstQuestionScreen extends AppCompatActivity {
                 String ans3 = answers[orderOfQuestions[queNumber - 1]][5];
                 String ans4 = answers[orderOfQuestions[queNumber - 1]][6];
 
+                if(mode.equals("nog")){
+                    //RadioButton rb5 = (RadioButton) findViewById(R.id.radioButton5);
+                    String ans5 = answers[orderOfQuestions[queNumber - 1]][7];
+                    que = answers[orderOfQuestions[queNumber - 1]][8];
+                }
+
+
                 if(ans1.equals(que)){
                     rb1.setBackgroundColor(Color.GREEN);
                     rb1.setTextColor(Color.BLACK);
@@ -616,6 +633,16 @@ public class firstQuestionScreen extends AppCompatActivity {
                     rb4.setBackgroundColor(Color.GREEN);
                     rb4.setTextColor(Color.BLACK);
                 }
+                if(mode.equals("nog")){
+                    /*if(ans5.equals(que)){
+                        rb5.setBackgroundColor(Color.GREEN);
+                        rb5.setTextColor(Color.BLACK);
+                    }
+                    rb5.setClickable(false);
+                    */
+
+                }
+
                 rb1.setClickable(false);
                 rb2.setClickable(false);
                 rb3.setClickable(false);

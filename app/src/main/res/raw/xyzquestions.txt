@@ -1,4 +1,4 @@
-Linjerna L1 och L2 skär varandra så att vinkeln a ≠ 90°. Vilket svarsalternativ är med säkerhet korrekt?
+﻿Linjerna L1 och L2 skär varandra så att vinkeln a ≠ 90°. Vilket svarsalternativ är med säkerhet korrekt?
 2a + b - c = 180°
 b - a = 90°
 2d + c - a = 180°
@@ -7,7 +7,7 @@ a + c = 90°
 yes
 hspxyz1
 2,1 * 3,9 ≈ 2 * 4 = 8. Multiplikationspotenslagen säger att 10^x * 10^y = 10^x+y alltå är 10^3 * 10^3 = 10^3+3 = 6. Svar ≈8*10^6.
-Vad är (2,1 * 10^3) * (3,9 * 10^3)
+Vad är (2,1 * 10^3) * (3,9 * 10^3)?
 7,19 * 10^6
 8,19 * 10^6
 7,19 * 10^9
@@ -34,3 +34,93 @@ Vad är 1 + 16?
 no
 na
 2,1 * 3,9 ≈ 2 * 4 = 8. Multiplikationspotenslagen säger att 10^x * 10^y = 10^x+y alltå är 10^3 * 10^3 = 10^3+3 = 6. Svar ≈8*10^6.
+Vilket heltal är närmast (√60)*(√80)?
+48
+56
+69
+75
+69
+no
+na
+7^2 = 7 * 7 = 49, 8^2 = 8 * 8 = 64, 64 är närmare 60, anta att √60 = 8. 9^2 = 9 * 9 = 81, anta att √80 = 9 . 8 * 9 = 72. 72 är närmast 69. Svar 69.
+n är ett udda tal. Vilket svarsalternativ är ett jämnt tal?
+n(n + 3)
+2n +3
+3n + 2
+n^2 + 2
+n(n + 3)
+no
+na
+Anta att n är 3. 3(3 + 3) = 18, 2 * 3 + 3 = 9, 3 * 3 + 2 = 11, 3^2 + 2 = 11. Rätt svar n(n + 3).
+Vad är 1/3 av x, om 5/11 av x är 45/77?
+3/7
+15/77
+5/33
+1/3
+3/7
+no
+na
+5/11 ≈ 1/2. 45/77 = 1/2x, x = (45 * 2)/77 = 90/77. 1/3 av 90/77 = (90/3)/77 = 30/77 ≈ 3/7. Svar 3/7.
+Vad är √32 - √18?
+√2
+√14
+2√2
+2√7
+√2
+no
+na
+6^2 = 36, 5^2 = 25, √32 ≈ 5,5. 4^2 = 16, √18 ≈ 4. 5.5 - 4 = 1.5 ≈ √2. Svar √2.√2 måste vara mer än 1 eftersom 1 * 1 = 1 och 0.9^2 < 1. Alltså är 2 * √2 mer än 2 som är mer än 1.5.
+Vilket av alternativen är störst?
+4/7
+1/2 + 1/3
+1/3 + 1/4
+2/3
+1/3 + 1/4
+no
+na
+I addition och subtraktion av bråk måste nämnaren vara samma i båda bråktalen. För att få dem samma multiplicerar vi nämnarna med varandra och täljarna med detsamma. B = 1 * 3/ 2 * 3 = 3/6, 1 * 2 / 3 * 2 = 2/6. 3/6 + 2/6 = 5/6. C = 1 * 4 / 3 * 4 = 4 / 12. 1 * 3 / 4 * 3 = 3/12. 4/12 + 3/12 = 7/12. För jämföra talen får vi alla till en gemensam nämnare. D = 2 * 4 / 3 * 4 = 8 / 12. B 5/6 * 2 = 10/12. A ≈ 4/7 * 2 < 8 / 12. A < C < D < B. B är störst. Rätt svar: 1/2 + 1/3.
+AB är parallell med CD. Vad är x? Noter att bilden inte är skalenlig
+70°
+90°
+110°
+130°
+110°
+yes
+parallellbild
+A = 30°, Vinkel motsatt A är 40°. Vinkelsumman i triangeln är 180°. 180° - (30° + 40°) = 110° 
+Vad är x om (2^2)^x = 4^4?
+2
+4
+6
+8
+4
+no
+na
+2^2 = 4. 4^x = 4^4. x = 4
+Vad är 6 * 4/5 - 2 * 8/3?
+-1/2
+-3/8
+-4/5
+-8/15
+-8/15
+no
+na
+6 * 4/5 = (6 * 4) / 5 = 24/5, (2 * 8) = 16/3. 24/5 - 16/3. Vid subtraktion av bråk behöver nämnaren vara samma i båda talen. 24 * 3 / 5 * 3 = 72 / 15. 16 * 5 / 3 * 5 = 80/15. 72/15 - 80/15 = -8/15.
+Vad är x om 1/x = 1/2 + 1/3?
+5/6
+6/5
+5
+6
+6/5
+no
+na
+Vid addition av bråk måste nämnaren vara samma i båda talen. 1 * 3 / 2 * 3 = 3/6. 1 * 2 / 3 * 2 = 2/6. 3/6 + 2/6 = 5/6. 1/x = 5/6. Multiplicera 6 i båda led. 6/x = 5. Flytta på x och 5. 6/5 = x. Svar 6/5.
+I en grupp på 30 personer är förhållandet mellan antalet män och antalet kvinnor 3:2. Hur många i gruppen är kvinnor?
+6
+10
+12
+15
+12
+no
+na
+Dela 30 på förhållandets storlekt alltså, 2 + 3 = 5. 30 / 5 = 6. Varje del är 6 personer. Kvinnor är 2 delar. 2 * 6 = 12.
