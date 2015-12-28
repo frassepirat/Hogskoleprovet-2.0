@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Högskoleprovet Lästräning"
+        android:id="@+id/textView11"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/titleMariginTop"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Den här delen av appen skickar dig vidare till Dagens Nyheter. Välj en av 6 kategorier och läs en artikel. OBSERVERA att läsdelen av appen kräver internetanslutning."
+        android:id="@+id/textView12"
+        android:layout_margin="15dp"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="240dp"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="@dimen/LäsButtonWidth"
+            android:layout_height="48dp"
+            android:text="Sverige"
+            android:id="@+id/button7"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:onClick="goToDNSverige"/>
+
+        <Button
+            android:layout_width="@dimen/LäsButtonWidth"
+            android:layout_height="wrap_content"
+            android:text="Politik"
+            android:id="@+id/button8"
+            android:layout_gravity="center_horizontal"
+            android:onClick="goToDnPolitik"/>
+
+        <Button
+            android:layout_width="@dimen/LäsButtonWidth"
+            android:layout_height="wrap_content"
+            android:text="Vetenskap"
+            android:id="@+id/button12"
+            android:layout_gravity="center_horizontal"
+            android:onClick="goToDnVetenskap"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="@dimen/LäsButtonWidth"
+            android:layout_height="wrap_content"
+            android:text="Världen"
+            android:id="@+id/button13"
+            android:layout_gravity="center_horizontal"
+            android:onClick="goToDnVarlden"/>
+
+        <Button
+            android:layout_width="@dimen/LäsButtonWidth"
+            android:layout_height="wrap_content"
+            android:text="Klimatet"
+            android:id="@+id/button14"
+            android:layout_gravity="center_horizontal"
+            android:onClick="goToDnKlimatet"/>
+
+        <Button
+            android:layout_width="@dimen/LäsButtonWidth"
+            android:layout_height="wrap_content"
+            android:text="Kultur"
+            android:id="@+id/button15"
+            android:layout_gravity="center_horizontal"
+            android:onClick="goToDnKultur"/>
+    </LinearLayout>
+
+    <!--<Button
+        android:layout_width="@dimen/LäsButtonWidth"
+        android:layout_height="wrap_content"
+        android:text="Tillbaka"
+        android:id="@+id/button16"
+        android:layout_gravity="center_horizontal"
+        android:onClick="goBackFromReading"/>
+    -->
+</LinearLayout>

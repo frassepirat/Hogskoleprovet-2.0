@@ -5,4 +5,16 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
+
+    <style name="noAnimTheme" parent="@style/Theme.AppCompat">
+       <!-- <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:windowBackground">@color/real_window_background</item>
+        <item name="android:colorButtonNormal">@color/window_background</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        -->
+    </style>
+
+
+    <color name="real_window_background">#0066ff</color>
 </resources>

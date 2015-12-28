@@ -102,6 +102,15 @@ public class notes extends AppCompatActivity {
             } else{
                 img.setBackgroundResource(0);
             }
+        } else if(mode.equals("nog")){
+            tx1.setText(questionNum + ". " + answers[orderOfQuestions[questionNum - 1]][0]
+                    + "\n\n" + answers[orderOfQuestions[questionNum - 1]][1]
+                    + "\n\n" + answers[orderOfQuestions[questionNum - 1]][2]);
+            if (answers[orderOfQuestions[questionNum - 1]][9].equals("yes")) {
+                img.setBackgroundResource(getResources().getIdentifier(answers[orderOfQuestions[questionNum - 1]][10], "drawable", getPackageName()));
+            } else{
+                img.setBackgroundResource(0);
+            }
         }
     }
 

@@ -68,6 +68,12 @@
             android:text="New RadioButton"
             android:id="@+id/radioButton4"
             android:layout_margin="@dimen/rbmargin"/>
+        <RadioButton
+            android:layout_width="@dimen/rb_width"
+            android:layout_height="wrap_content"
+            android:text="New RadioButton"
+            android:id="@+id/nogRB"
+            android:layout_margin="@dimen/rbmargin"/>
     </RadioGroup>
 
     <TextView
@@ -120,7 +126,7 @@
         android:text=""
         android:id="@+id/warningText"
         android:layout_gravity="center_horizontal"
-        android:textColor="#FF0000"/>
+        android:textColor="@color/warning_color"/>
 
 
 </LinearLayout>

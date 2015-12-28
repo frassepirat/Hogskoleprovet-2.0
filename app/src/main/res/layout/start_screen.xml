@@ -7,10 +7,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Högskoleprovet Träning"
+        android:text=""
         android:id="@+id/textView2"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="35dp"/>
+        android:layout_marginTop="10dp"/>
+
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView3"
+        android:src="@drawable/hsp_icon04"
+        android:layout_gravity="center_horizontal" />
 
     <Button
         android:layout_width="115dp"
@@ -18,7 +27,7 @@
         android:text="Kvantitativ"
         android:id="@+id/button4"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="40dp"
         android:onClick="goToKvantitativ"/>
 
     <Button
@@ -26,7 +35,8 @@
         android:layout_height="wrap_content"
         android:text="Verbalt"
         android:id="@+id/button5"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:onClick="goToVerbalt"/>
 
     <Button
         android:layout_width="115dp"

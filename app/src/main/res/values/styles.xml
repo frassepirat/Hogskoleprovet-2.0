@@ -14,8 +14,14 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
     <style name="noAnimTheme" parent="@style/Theme.AppCompat">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:windowBackground">@color/window_background</item>
         <item name="android:windowAnimationStyle">@null</item>
     </style>
 
 
+    <color name="primary">#0052cc</color>
+    <color name="primary_dark">#0047b3</color>
+    <color name="window_background">#ffcc00</color>
 </resources>

@@ -10,4 +10,5 @@
     <dimen name="CorrectAnswerMargin">10dp</dimen>
     <dimen name="rb_width">260dp</dimen>
     <dimen name="button_width">130dp</dimen>
+    <dimen name="LäsButtonWidth">120dp</dimen>
 </resources>

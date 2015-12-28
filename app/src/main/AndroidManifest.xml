@@ -39,7 +39,10 @@
             android:label="Om Frågan"
             android:theme="@style/noAnimTheme"/>
         <activity android:name=".antalFragor"
-            android:label="Antal Frågor"
+            android:label="Högskoleprovet 2.0"
+            android:theme="@style/noAnimTheme"/>
+        <activity android:name=".readingActivity"
+            android:label="Högskoleprovet 2.0"
             android:theme="@style/noAnimTheme"/>
 
     </application>

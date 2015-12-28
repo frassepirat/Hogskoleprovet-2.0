@@ -17,13 +17,15 @@ public class startScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start_screen);
 
-        Button verbalt = (Button) findViewById(R.id.button5);
-        verbalt.setEnabled(false);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
 
     }
 
     public void goToKvantitativ(View view) {
         Intent goToKvant = new Intent(this, kvantitativDel.class);
+        goToKvant.putExtra("vilkenDel", "kvantitativ");
         startActivity(goToKvant);
     }
 
@@ -35,5 +37,12 @@ public class startScreen extends AppCompatActivity {
         dlgAlert.setNegativeButton("Ok", null);
         dlgAlert.setCancelable(true);
         dlgAlert.create().show();
+    }
+
+    public void goToVerbalt(View view) {
+        Intent goToVerb = new Intent(this, kvantitativDel.class);
+        goToVerb.putExtra("vilkenDel", "verbal");
+        startActivity(goToVerb);
+
     }
 }

@@ -53,6 +53,11 @@ public class firstQuestionScreen extends AppCompatActivity {
 
         mode = intent.getStringExtra("mode");
 
+        RadioButton rb5 = (RadioButton) findViewById(R.id.nogRB);
+        if(!mode.equals("nog")) {
+            rb5.setVisibility(View.GONE);
+        }
+
         if(intent.getStringExtra("screen") != null){
             screen = intent.getStringExtra("screen");
             questionChoices = intent.getIntArrayExtra("questionChoices");
@@ -87,6 +92,9 @@ public class firstQuestionScreen extends AppCompatActivity {
                 case 4:
                     rb4.setChecked(true);
                     break;
+                case 5:
+                    rb5.setChecked(true);
+                    break;
                 default:
                     break;
             }
@@ -102,12 +110,11 @@ public class firstQuestionScreen extends AppCompatActivity {
                 maxAnsRange = 7;
                 is = getResources().openRawResource(R.raw.kvaquestions);
             } else if(mode.equals("nog")){
-                answers = new String[100][11];
-                numLinesInTxt = 11;
+                answers = new String[100][12];
+                numLinesInTxt = 12;
                 minAnsRange = 3;
                 maxAnsRange = 8;
                 is = getResources().openRawResource(R.raw.nogquestions);
-
             }
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
@@ -156,17 +163,19 @@ public class firstQuestionScreen extends AppCompatActivity {
             }
 
             //shuffle the answerpositions
-            List<String> shuffleBuffer = new ArrayList<>();
-            for (int i = 0; i < numOfQuestions; i++) {
-                for (int j = minAnsRange; j < maxAnsRange; j++) {
-                    shuffleBuffer.add(answers[i][j]);
-                }
-                Collections.shuffle(shuffleBuffer);
-                for (int j = 0; j < 4; j++) {
-                    answers[i][j + minAnsRange] = shuffleBuffer.get(j);
-                }
-                shuffleBuffer.clear();
+            if(!mode.equals("nog")) {
+                List<String> shuffleBuffer = new ArrayList<>();
+                for (int i = 0; i < numOfQuestions; i++) {
+                    for (int j = minAnsRange; j < maxAnsRange; j++) {
+                        shuffleBuffer.add(answers[i][j]);
+                    }
+                    Collections.shuffle(shuffleBuffer);
+                    for (int j = 0; j < 4; j++) {
+                        answers[i][j + minAnsRange] = shuffleBuffer.get(j);
+                    }
+                    shuffleBuffer.clear();
 
+                }
             }
 
             //get the correct position of the answer
@@ -212,6 +221,7 @@ public class firstQuestionScreen extends AppCompatActivity {
         RadioButton rb2 = (RadioButton) findViewById(R.id.radioButton2);
         RadioButton rb3 = (RadioButton) findViewById(R.id.radioButton3);
         RadioButton rb4 = (RadioButton) findViewById(R.id.radioButton4);
+        RadioButton rb5 = (RadioButton) findViewById(R.id.nogRB);
 
         TextView warningText = (TextView) findViewById(R.id.warningText);
 
@@ -256,7 +266,7 @@ public class firstQuestionScreen extends AppCompatActivity {
             startActivityForResult(checkScore, result);
 
 
-        } else if(rb1.isChecked() || rb2.isChecked() || rb3.isChecked() || rb4.isChecked()) {
+        } else if(rb1.isChecked() || rb2.isChecked() || rb3.isChecked() || rb4.isChecked() || rb5.isChecked()) {
 
             if(rb1.isChecked()){
                 questionChoices[queNumber] = 1;
@@ -266,6 +276,8 @@ public class firstQuestionScreen extends AppCompatActivity {
                 questionChoices[queNumber] = 3;
             } else if(rb4.isChecked()){
                 questionChoices[queNumber] = 4;
+            } else if(mode.equals("nog") && rb5.isChecked()){
+                questionChoices[queNumber] = 5;
             }
 
 
@@ -342,7 +354,7 @@ public class firstQuestionScreen extends AppCompatActivity {
                     RadioButton rb2 = (RadioButton) findViewById(R.id.radioButton2);
                     RadioButton rb3 = (RadioButton) findViewById(R.id.radioButton3);
                     RadioButton rb4 = (RadioButton) findViewById(R.id.radioButton4);
-
+                    RadioButton rb5 = (RadioButton) findViewById(R.id.nogRB);
 
 
                     switch (questionChoices[queNumber]){
@@ -357,6 +369,9 @@ public class firstQuestionScreen extends AppCompatActivity {
                             break;
                         case 4:
                             rb4.setChecked(true);
+                            break;
+                        case 5:
+                            rb5.setChecked(true);
                             break;
                         default:
                             break;
@@ -376,6 +391,7 @@ public class firstQuestionScreen extends AppCompatActivity {
                 RadioButton rb2 = (RadioButton) findViewById(R.id.radioButton2);
                 RadioButton rb3 = (RadioButton) findViewById(R.id.radioButton3);
                 RadioButton rb4 = (RadioButton) findViewById(R.id.radioButton4);
+                RadioButton rb5 = (RadioButton) findViewById(R.id.nogRB);
 
                 switch (questionChoices[queNumber]){
                     case 1:
@@ -389,6 +405,9 @@ public class firstQuestionScreen extends AppCompatActivity {
                         break;
                     case 4:
                         rb4.setChecked(true);
+                        break;
+                    case 5:
+                        rb5.setChecked(true);
                         break;
                     default:
                         break;
@@ -482,6 +501,7 @@ public class firstQuestionScreen extends AppCompatActivity {
             RadioButton rb2 = (RadioButton) findViewById(R.id.radioButton2);
             RadioButton rb3 = (RadioButton) findViewById(R.id.radioButton3);
             RadioButton rb4 = (RadioButton) findViewById(R.id.radioButton4);
+            RadioButton rb5 = (RadioButton) findViewById(R.id.nogRB);
 
             if (rb1.isChecked()) {
                 questionChoices[queNumber] = 1;
@@ -491,6 +511,8 @@ public class firstQuestionScreen extends AppCompatActivity {
                 questionChoices[queNumber] = 3;
             } else if (rb4.isChecked()) {
                 questionChoices[queNumber] = 4;
+            } else if(rb5.isChecked()){
+                questionChoices[queNumber] = 5;
             }
 
             goingBack.putExtra("questionNumber", Integer.toString(queNumber - 1));
@@ -541,6 +563,7 @@ public class firstQuestionScreen extends AppCompatActivity {
         RadioButton rb2 = (RadioButton) findViewById(R.id.radioButton2);
         RadioButton rb3 = (RadioButton) findViewById(R.id.radioButton3);
         RadioButton rb4 = (RadioButton) findViewById(R.id.radioButton4);
+        RadioButton rb5 = (RadioButton) findViewById(R.id.nogRB);
 
         TextView setQuestion = (TextView) findViewById(R.id.firstQuestion);
 
@@ -573,9 +596,7 @@ public class firstQuestionScreen extends AppCompatActivity {
             rb3.setText("C" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][5]);
             rb4.setText("D" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][6]);
 
-            //RadioButton rb5 = (RadioButton) findViewById(R.id.radioButton5);
-
-            //rb5.setText("E" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][7]);
+            rb5.setText("E" + getString(R.string.spaces) + answers[orderOfQuestions[queNumber - 1]][7]);
         }
         if(screen.equals("score")){
 
@@ -584,11 +605,13 @@ public class firstQuestionScreen extends AppCompatActivity {
             rb2.setBackgroundColor(0);
             rb3.setBackgroundColor(0);
             rb4.setBackgroundColor(0);
+            rb5.setBackgroundColor(0);
 
             rb1.setTextColor(Color.WHITE);
             rb2.setTextColor(Color.WHITE);
             rb3.setTextColor(Color.WHITE);
             rb4.setTextColor(Color.WHITE);
+            rb5.setTextColor(Color.WHITE);
 
             if(mode.equals("kva") || mode.equals("nog")){
 
@@ -604,6 +627,9 @@ public class firstQuestionScreen extends AppCompatActivity {
                 } else if(rb4.isChecked()){
                     rb4.setBackgroundColor(Color.RED);
                     rb4.setTextColor(Color.BLACK);
+                } else if(rb5.isChecked()){
+                    rb5.setBackgroundColor(Color.RED);
+                    rb5.setTextColor(Color.BLACK);
                 }
 
                 String que = answers[orderOfQuestions[queNumber - 1]][7];
@@ -612,10 +638,9 @@ public class firstQuestionScreen extends AppCompatActivity {
                 String ans2 = answers[orderOfQuestions[queNumber - 1]][4];
                 String ans3 = answers[orderOfQuestions[queNumber - 1]][5];
                 String ans4 = answers[orderOfQuestions[queNumber - 1]][6];
+                String ans5 = answers[orderOfQuestions[queNumber - 1]][7];
 
                 if(mode.equals("nog")){
-                    //RadioButton rb5 = (RadioButton) findViewById(R.id.radioButton5);
-                    String ans5 = answers[orderOfQuestions[queNumber - 1]][7];
                     que = answers[orderOfQuestions[queNumber - 1]][8];
                 }
 
@@ -633,13 +658,13 @@ public class firstQuestionScreen extends AppCompatActivity {
                     rb4.setBackgroundColor(Color.GREEN);
                     rb4.setTextColor(Color.BLACK);
                 }
-                if(mode.equals("nog")){
-                    /*if(ans5.equals(que)){
+                else if(mode.equals("nog")){
+                    if(ans5.equals(que)){
                         rb5.setBackgroundColor(Color.GREEN);
                         rb5.setTextColor(Color.BLACK);
                     }
                     rb5.setClickable(false);
-                    */
+
 
                 }
 
