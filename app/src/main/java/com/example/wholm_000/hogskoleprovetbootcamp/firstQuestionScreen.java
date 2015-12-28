@@ -121,8 +121,7 @@ public class firstQuestionScreen extends AppCompatActivity {
             StringBuilder out = new StringBuilder();
             String line;
 
-            int numOfQuestionsToRead = intent.getIntExtra("numOfQuestionsToRead", 1);
-
+            int numOfQuestionsToRead = 50;
             try {
                 for (int i = 0; i < numOfQuestionsToRead; i++) {
                     for (int j = 0; j < numLinesInTxt; j++) {
@@ -196,6 +195,8 @@ public class firstQuestionScreen extends AppCompatActivity {
                     correctAnsPos[i] -= 2;
                 }
             }
+
+            numOfQuestions = intent.getIntExtra("numOfQuestionsToRead", 1);
 
         }
         setQuestionsAndAnswers();
