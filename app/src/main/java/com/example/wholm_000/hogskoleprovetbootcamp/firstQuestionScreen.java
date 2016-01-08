@@ -118,10 +118,8 @@ public class firstQuestionScreen extends AppCompatActivity {
             }
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            StringBuilder out = new StringBuilder();
-            String line;
 
-            int numOfQuestionsToRead = 50;
+            int numOfQuestionsToRead = 80;
             try {
                 for (int i = 0; i < numOfQuestionsToRead; i++) {
                     for (int j = 0; j < numLinesInTxt; j++) {

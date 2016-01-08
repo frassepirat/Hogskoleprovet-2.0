@@ -56,7 +56,7 @@ public class kvantitativDel extends AppCompatActivity {
 
             subTitle.setText(R.string.subTitleVerbala);
 
-            ord.setEnabled(false);
+            //ord.setEnabled(false);
             mek.setEnabled(false);
             elf.setEnabled(false);
 
@@ -74,12 +74,16 @@ public class kvantitativDel extends AppCompatActivity {
     //ord
     public void gotoQuizxyz(View view) {
 
-        Intent getNameScreenIntent = new Intent(this, antalFragor.class);
+        Intent getNameScreenIntent;
 
         final int result = 1;
 
-        getNameScreenIntent.putExtra("mode", "xyz");
-
+        if(vilkenDel.equals("kvantitativ")) {
+            getNameScreenIntent = new Intent(this, antalFragor.class);
+            getNameScreenIntent.putExtra("mode", "xyz");
+        } else{
+            getNameScreenIntent = new Intent(this, showWords.class);
+        }
         startActivityForResult(getNameScreenIntent, result);
 
     }
