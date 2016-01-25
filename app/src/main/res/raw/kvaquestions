@@ -8,7 +8,7 @@ informationen är otillräcklig
 I är lika med II
 no
 na
-
+Sannolikheten att ett mynts sida hamnar på en viss sida är 1/2 att det sker två gånger är 1/2 * 1/2. Vilken sida den hamnar på två gåner i rad är lika stor som den andra sidan.
 Kvantitet I: 0,99^99
 Kvantitet II: 1,1^11
 I är större än II
@@ -38,3 +38,93 @@ informationen är otillräcklig
 I är större än II
 no
 na
+Kvantitet I: 15 * 36 + 15 * 64
+Kvantitet II: 1501
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+II är större än I
+no
+na
+15 * 36 = 10 * 36 + 5 * 36 = 360 + 180. = 540. 15 * 64 = 10 * 64 + 5 * 64 = 640 + 320 = 960. 540 + 960 = 1500. II är större än I
+Kvantitet I: Diagonalen i rektangeln ABCD
+Kvantitet II: Halva omkretsen i rektangeln ABCD
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+II är större än I
+no
+na
+Anta att längden A = längden B och längden C = längden D. Diagonalen är då enligt pythagoras sats √(A² + C²) = D. Halva Omkretsen är ena sidan plus den andra alltså A + C. Diagonalen är alltid kortare än Halva omkretsen. Alltså II är större än I.
+I en låda finns endast blå röda och gula bollar 1/3 av bollarna är blå och 1/6 av bollarna är röda. En boll dras slumpmässigt. Kvantitet I: Sannolikheten att den dragna bollen är gul.
+Kvantitet II: Sannolikheten att den dragna bollen är blå eller röd.
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är lika med II
+no
+na
+Totalt antal bollar = 1 = 1/3 + 1/6 + x. Ge en gemensam nämnare. 2/6 + 1/6 = 3/6. Antal gula är då 1 - 3/6 = 3/6. 3/6 = 3/6 Alltså är I lika med II
+8x + 4 = 10. Kvantitet I: 4x + 2
+Kvantitet II: 8 - 10 / 4
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+II är större än I
+no
+na
+Börja med att räkna ut x. 8x + 4 = 10. 8x = 6. x = 6/8. x = 3/4. Kvantitet I = 4 * 3/4 + 2 = 12 / 4 + 2 = 5. Kvantitet II = 8 - 2 - 1/2 = 5,5. II är större än I
+a < b. Kvantitet I: Avståndet mellan origio (0, 0) och (a, b)
+Kvantitet II: Avståndet mellan origo (0, 0) och (b, a)
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är lika med II
+no
+na
+Avståndet mellan två punkter räknas ut med pythagoras sats. √(a² + b²) = √(b² + a²). I är lika med II.
+L1 och L2 är parallella linjer A, B, C och D är punkter på dessa linjer, AD är längre än AC. Kvantitet I: Arean av triangeln ABC
+Kvantitet II: Arean av triangeln ABD
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är lika med II
+yes
+triangel_linjer
+Arean av en triangel räknas ut genom basen gånger höjden delat på två. b * h / 2. Eftersom basen och höjden är samma på båda trianglarna så är arean den samma. Alltså I är lika med II.
+k, m och n är heltal. 0 < k < m < n. Kvantitet I: m/n
+Kvantitet II: k/m
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+Informationen är otillräcklig
+no
+na
+Eftersom vi inte vet hur mycket följden ökar med så går det inte att vet vilken kvantitet som är störst.
+x > 0. Kvantitet I: x^1/4
+Kvantitet II: √√x
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är lika med II
+no
+na
+√x = x^1/2. √x^1/2 = x^1/4. Kva I = Kva II.
+x och y är positiva heltal. 5x + 10y = 270 580. Kvantitet I: största möjliga värdet på x.
+Kvantitet II: Största möjliga värdet på y.
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är större än II
+no
+na
+Största möjliga värdet på x är när y = 1. Största möjliga värdet på y är när x = 1. 5 måste multipliceras dubbelt så många gånger för att nå 270 580 än vad 10 måste därför är största värdet på x större än största värdet på y.

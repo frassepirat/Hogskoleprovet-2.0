@@ -193,9 +193,12 @@ public class firstQuestionScreen extends AppCompatActivity {
                     correctAnsPos[i] -= 2;
                 }
             }
-
+            //make sure it does not array out of bounds
+            int numQueBuffer = numOfQuestions;
             numOfQuestions = intent.getIntExtra("numOfQuestionsToRead", 1);
-
+            if(numOfQuestions > numQueBuffer){
+                numOfQuestions = numQueBuffer;
+            }
         }
         setQuestionsAndAnswers();
 

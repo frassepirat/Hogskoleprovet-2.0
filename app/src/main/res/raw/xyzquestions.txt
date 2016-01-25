@@ -141,7 +141,7 @@ Heltalet x är jämnt delbart med både 6 och 9. Vilket av nedanstående tal må
 18
 no
 na
-72 / 6 = 12. 72 / 9 != jämnt delbart. 27 och 15 är inte delbara med 6 då de inte är jämna. 18 / 9 = 2. 18 / 6 = 3. Svar 18.
+72 / 6 = 12. 72 / 9 ≠ jämnt delbart. 27 och 15 är inte delbara med 6 då de inte är jämna. 18 / 9 = 2. 18 / 6 = 3. Svar 18.
 4/(x+1) - (x+1)/4 = 4/17 - 17/4. Vilket av svarsalternativen är ett möjligt värde på x?
 1
 4
@@ -196,3 +196,156 @@ Vilket svarsförslag är en fullständing primtalsfaktorisering av 156?
 no
 na
 12 * 13 är inte en primtalsfaktorisering då 12 inte är ett primtal, detsamma med 3 * 52. 	2 * 2 * 3 * 13 = 12 * 13 = 12 * 10 + 12 * 3 = 120 + 36 = 156. 13 är ett primtal. Då är 39 inte ett primtal. Alltså är svaret 2 * 2 * 3 * 13.
+Vad är 5 + 4 * 3 - 20/10?
+-0,3
+0,7
+15
+25
+15
+no
+na
+Prioriteringsreglera säger att multiplikation från vänster till höger sker först. 4 * 3 = 12. 20/10 = 2. 12 -2 + 5 = 15
+AB = BC = CD = 4 längdenheter. AE = EF = FG = GD = 3 längdenheter. Hur lång är sträckan BG?
+4 längdenheter
+4,5 längdenheter
+5 längdenheter
+5,5 längdenheter
+5 längdenheter
+yes
+pic1
+AF är 6 längdenheter. AC är 8 längdenheter. FC är då AC - AF = 8 - 6 = 2 l.e. FG är 3 l.e. FG - FC = CG = 1 l.e. BC är 4 l.e. BC + CG = 4 + 1 = 5 l.e.
+Hur stor är vinkeln D i parallelltrapetsen ABCD?
+105°
+120°
+135°
+150°
+120°
+yes
+pic2
+Om vi delar parallelltrapetsen så att vi får två rätvinkliga trianglar från sidorna av trapetsen och sedan slår ihop dem så får vi en liksidig triangel och den resterande biten är en kvadrat med sidan x vars vinklar är 90°. Alla vinklar i den liksidga triangeln är 60° och delar vi triangeln på mitten får vi vinkeln 30°. 30° + 90° = 120°.
+Kurvan y = x² + x - 6 skär x-axeln i två punkter. Vilka x-värden har dessa punkter?
+x = 3 och x = 2
+x = 3 och x = -2
+x = -3 och x = 2
+x = -3 och x = -2
+x = -3 och x = 2
+Där en kurva skär x led så måste y vara lika med 0 för att se vilket svar som är rätt använder vi oss av uteslutningsmetoden och börjar med x = 3. 3² + 3 - 6 ≠ 0. Sedan x = 2. 2² + 2 - 6 = 0. 2 är rätt. Sedan testar vi -3. -3² - 3 - 6 = 9 - 3 - 6 = 0. Rätt svar är x = -3 och x = -2.
+no
+na
+Vid beräkning av (4/5 - 3/4) + (2/3 + 1/2) erhålls ett bråk av positiva heltal. Vilken är den minsta nämnare som bråket kan ha?
+6
+20
+60
+72
+60
+no
+na
+Vi tar bort paranteserna, 4/5 - 3/4 + 2/3 + 1/2 = 4/5 - 3/4 + 2/3 + 2/4 = 4/5 - 1/4 + 2/3. 4/5 - 3/12 + 8/12 = 4/5 + 5/12 = 48/60 + 25/60 = 73/60. Svar: 60.
+(x(y - z))/(y(x + y + z)) = 1/3. Om x = 4 och y = 3, vad är då z?
+1
+2
+3
+4
+1
+no
+na
+sätt in x = 4 och y = 3. ( 4 ( 3 - z ) ) / ( 3 ( 4 + 3 + z ) ). (12 - 4z) / (12 + 9 + 3z) = 1/3. 12 + 9 + 3z ska alltså vara 3 ggr större än 12 - 4z. Vi provar oss fram med z = 1 först. 12 - 4 = 8. 21 + 3 = 3 * 8. Svar z = 1.
+Om Lotta var 28 år för x år sedan, hur gammal var hon för 12 år sedan?
+(16 + x) år
+(16 - x) år
+(40 + x) år
+(40 - x) år
+(16 + x) år
+no
+na
+Lotta är 28 + x år gammal. Hon var 28 - 12 + x år gammal för 12 år sedan. Alltså (16 + x) år gammal.
+Vad är (3x - 1)2x - x(3x - 2)?
+3x²
+3x² - 4x
+9x²
+9x² - 4x
+3x²
+no
+na
+Börja med att förenkla. (3x - 1) * 2x = 6x² - 2x. x(3x - 2) = 3x² - 2x. 6x² - 2x - 3x² + 2x = 3x². Svar 3x².
+a, b och c är tre på varandra följande heltal så att a < b < c. Vad är ((a - b)/(b - c)) * (a - c)?
+-2
+-1
+1
+2
+-2
+no
+na
+a - b måste bli -1 eftersom b är ett större än a. b -c måste också bli -1 av samma anledning. a - c måste bli -2 då c är 2 mer än a. -1 / -1 * -2 = -2.
+40 personer deltar i ett prov med 6 frågor.
+2
+2,5
+3
+4
+2,5
+yes
+antal_poang
+Median är när man ställer upp alla tal i storleksordning och sedan väljer det tal som är i mitten. Totalt finns det 40 tal. Räkna talen fram till tal 20. tal 2 är tal 20 och tal 3 är 21. Medianen är de två talen i mitten tillsamans delat på två. 2 + 3 = 5. 5 / 2 = 2,5
+Arean av en cirkel är 16 cm² större än arean av en kvadrat med sidan 3 cm. Vad är cirkelns radie?
+5 / pi cm
+5 / √pi cm
+√5 / pi cm
+√(5 / pi) cm
+5 / √pi cm
+no
+na
+Arean av en kvadrat med sidan 3 cm är 3² = 9 cm. Arean på cirkeln är då 25 cm. Formeln för area i en cirkel är A = r * r * pi. 25 = r * r * pi. √(25 / pi) = r. 5 / √pi = r.
+Hur stor är vinkeln v?
+92°
+97°
+103°
+105°
+103°
+yes
+vinklar
+vinkelsumman är 180° 59 + 33 + 2x = 180. 2x = 180 - 92 = 88° x = 44. 33 + 44 + v = 180. v = 103°.
+Medelvärdet av tre på varandra följande heltal är 947. Vad är summan av det minsta och det största talet?
+1884
+1886
+1894
+1896
+1894
+no
+na
+Om medelvärdet på de tre talen är 947 så måste följden se ut så här. 946, 947, 948. Vi räknar ut 946 + 948 mha uppställningsmetoden och får 1894.
+På fyra dagar sålde en affär varor för x, y, w respektive z kronor. Om x > y > w > z, vilket av svarsförslagen kan då vara korrekt?
+y = x + z
+x = y + w
+w = y + z
+z = x + y
+x = y + w
+no
+na
+x är större än alla andra tal enligt x > y > w > z därför kan x = y + w stämma.
+Vad är b då x/y = 5a/3b?
+5ax/y
+5ax/3y
+5ay/x
+5ay/3x
+5ay/3x
+no
+na
+multiplicera 3b i båda led. 3b * x/y = 5a. Multiplicera med y i båda led. 3b * x = 5ay. Dela med x i båda led. 3b = 5ay/x. Dela med 3 i båda led. b = 5ay/3x.
+Bestäm koordinaterna för mittpunkten på sträckan som har (-3, -2) och (7,4) som ändpunkter.
+(2,1)
+(2,3)
+(5,1)
+(5,3)
+(2,1)
+no
+na
+x mittpunkten är mellan 7 och -3. Skilladen mellan -3 och 7 är 10 mitten på 10 är 5. 5 ifrån -3 är 2. Skilladen på -2 och 4 är 6. Mitten på 6 är 3. 3 från -2 är 1. Svar (2,1)
+Vilket av följande tal ligger närmast 1?
+4/5
+5/4
+7/9
+9/7
+4/5
+no
+na
+Börja med att subtrahera 1 på alla alternativ. 4/5 - 5/5 = -1/5. 5/4 - 4/4 = 1/4. 7/9 - 9/9 = -2/9. 9/7 - 7/7 = 2/7. Vi letar efter det minsta positiva eller största negativa talet av de här 4 talen. Det går att förlänga -1/5 till -2/10 Vilket är är närmare noll än 2/7, -2/9 och 1/4. Svar 4/5 är närmast ett.

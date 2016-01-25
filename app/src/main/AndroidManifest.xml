@@ -11,7 +11,8 @@
         <activity
             android:name=".startScreen"
             android:label="Högskoleprovet 2.0"
-            android:theme="@style/noAnimTheme" >
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,38 +23,46 @@
         <activity android:name=".kvantitativDel"
             android:label="Högskoleprovet 2.0"
             android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
             />
 
         <activity android:name=".secondQuestionScreen"
             android:label="Högskoleprovet 2.0"
             android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
             />
 
         <activity android:name=".firstQuestionScreen"
             android:label="Högskoleprovet 2.0"
             android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
             />
 
         <activity android:name=".notes"
             android:label="Anteckningar"
             android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"
             />
 
         <activity android:name=".aboutQuestion"
             android:label="Om Frågan"
-            android:theme="@style/noAnimTheme"/>
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"/>
 
         <activity android:name=".antalFragor"
             android:label="Högskoleprovet 2.0"
-            android:theme="@style/noAnimTheme"/>
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"/>
 
         <activity android:name=".readingActivity"
             android:label="Högskoleprovet 2.0"
-            android:theme="@style/noAnimTheme"/>
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"/>
 
         <activity android:name=".showWords"
             android:label="Högskoleprovet 2.0"
-            android:theme="@style/noAnimTheme"/>
+            android:theme="@style/noAnimTheme"
+            android:screenOrientation="portrait"/>
 
     </application>
 

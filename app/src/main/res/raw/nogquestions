@@ -9,7 +9,7 @@ ej genom de båda påståendena
 ej genom de båda påståendena
 na
 no
-sdfsdafdsf
+Eftersom vi inte får reda på hur lång träjärnvägen är så kan vi inte använda oss av varken (1) eller (2).
 På ett skolfoto har eleverna röda eller blå tröjor. Hur stor andel av eleverna på fotot har blå tröjor?
 (1) 6 elever på fotot har inte röda tröjor
 (2) Om man räknar bort 1/3 av antalet elever med röda tröjor på fotot, så utgör de med blå tröjor 1/2 av de elever som återstår.
@@ -21,7 +21,7 @@ ej genom de båda påståendena
 i (2) men ej i (1)
 no
 na
-asdhlaslfksdkjg
+(1) säger att det totala - 6 är samma som dem som har blåa tröjor. (2) ger oss tillräckligt med information utan (1).
 I en kartong finns det äpplen som är antingen mogna eller omogna. Hur många äpplene i kartongen är mogna?
 (1) Om sex mogna äpplen avlägsnas från kartongen så utgör de omogna äpplena en tredjedel av alla äpplen i kartongen.
 (2) Om man byter ut två mogna äpplen mot två omogna äpplen så finns det dubbelt så många mogna som omogna äpplen i kartongen.
@@ -33,4 +33,76 @@ ej genom de båda påståendena
 ej genom de båda påståendena
 no
 na
-sadklasdsa
+antal mogna = x antal omogna = y. y / (x + y + 6) = 1/3. x = 2y + 6. x - 2 = 2 * (y + 2). x = 2y + 6. Det finns oändligt många lösningar alltså ej genom de båda påståendena.
+Vid en förskoleavdelning för barn i åldrarna 1-3 år finns 12 barn. Vilken är medelåldern bland flickorna på avdelningen?
+(1) Medelåldern på barnen som går på avdelningen är två år.
+(2) Två tredjedelar av barnen på avdelning är flickor.
+i (1) men ej i (2)
+i (2) men ej i (1)
+i (2) tillsammans med (2)
+i (1) och (2) var för sig
+ej genom de båda påståendena
+ej genom de båda påståendena
+na
+no
+Antal barn = 12. Medelåldern för flickorna = f. Medelåldern för pojkarna = p. Vi behöver kunna beräkna f. Vi kan beräkna f, när vi har en ekvation där f är det enda okända värdet. Påstående (1) ger oss: Medelåldern för barnen = 2. Barnens totala ålder = 2 * 12 = 24. Ej tillräckligt information.Påstående (2) ger oss: Antal flickor = 12 * 2 / 3 = 8. Antal pojkar = 12 - 8 = 4. Ej tillräcklig information. Påstående (1) och (2) tillsammans ger oss: Barnens totala ålder = 8f + 4p = 2 * 12 = 24. Ej tillräcklig information. Rätt svar är E.
+Arvid, Benjamin och Clara startar samtidigt från startplatsen. De går med konstanta hastigheter runt en bana som är 400 meter lång. Efter hur lång tid passerar de samtidigt startplatsen första gången?
+(1) Clara går dubbelt så fort som Arvid, och medelvärdet av Arvids och Claras hastigheter är lika med Benjamins hastighet.
+(2) Arvids hastighet är 2km/h. Benjamins är 3km/h och Claras är 4km/h
+i (1) men ej i (2)
+i (2) men ej i (1)
+i (2) tillsammans med (2)
+i (1) och (2) var för sig
+ej genom de båda påståendena
+i (2) men ej i (1)
+no
+na
+(1) Clara = 2x. Arvid = x. Benjamin = 3x/2. Eftersom vi inte har fått någon tid att jobba med så kan vi inte räkna ut med hjälp av (1). (2) Eftersom vi får deras hastigheter i (2) så kan vi räkna ut under vilka tidpunkter de korsar startplatsen och därmed svara på frågan utan att använda oss av (1) Rätt svar är E, ej genom de båda påståendena
+På en cykelparkering finns enbart herrcyklar, damcyklar och barncyklar. Hur många barncyklar finns det på parkeringen?
+(2) Det finns 48 damcyklar och 120 herrcyklar. 20 procent av det totala antalet cyklar på parkeringen är barncyklar.
+(1) Det finns totalt 210 cyklar på parkeringen och av dem är 4/7 herrcyklar och 48 är damcyklar.
+i (1) men ej i (2)
+i (2) men ej i (1)
+i (1) tillsammans med (2)
+i (1) och (2) var för sig
+ej genom de båda påståendena
+i (1) och (2) var för sig
+no
+na
+(1) antalet barncyklar genom (1) är 210 - (210 * 4/7) - 48. Så det går att lösa med bara (1). (2) Anatlet barncyklar genom (2) är 48 + 120 + 0.2*x = x. 168 + 0.2x = x. 168 = 0.8x. 168/0.8 = x. Det går att lösa ut x och därmed få 0.2 * x som är barncyklar. Alltså är svaret D  i (1) och (2) var för sig.
+Isabella, Anna, Katja, Olga och Fatima bor i samma tvåvåningshus. Olga bor inte på samma våning som Katja och Fatima. Isabella bor på den övre vångingen. På vilken våning bor respektive kvinna?
+(2) Anna bor på en annan våning än Isabella och Katja
+(1) Det bor minst två kvinnor på varje våning.
+i (1) men ej i (2)
+i (2) men ej i (1)
+i (1) tillsammans med (2)
+i (1) och (2) var för sig
+ej genom de båda påståendena
+i (2) men ej i (1)
+no
+na
+Två våningar. Vi säger att Olga bor på våning två eller ett och Katja och Fatima bor på våning två eller ett. (1) Vi vet att det bor två på en våning, Katja och Fatima. Med hjälp av den här informationen så vet vi att Isabella och Katja kan antingen bo med Katja och Fatima eller Olga. Inget mer. (2) Med den här informationnen så vet vi att Isabella, Katja och Fatima bor på samma våning, den övre våningen. Då bor Olga tillsammans med Anna. Alltså kan vi ta reda på informationen utan att använda oss av (1). Alltså i (2) men ej i (1)
+En spelkula kastas slumpmässigt och landar på ett cirkulärt plant bord. På bordet finns en triangelformad duk vars hörn tangerar bordets kanter. Vad är sannolikheten att spelkulan landar utanför duken?
+Dukens hypotenusa har samma längd som bordets diameter.
+(1) Bordets radie är 20 cm och dukens area är 400cm².
+i (1) men ej i (2)
+i (2) men ej i (1)
+i (1) tillsammans med (2)
+i (1) och (2) var för sig
+ej genom de båda påståendena
+i (1) men ej i (2)
+no
+na
+Area bordsyta med duk (cm²) = d, Area bordsyta utan duk (cm²) = b, Totala bordsytan (cm²)  = t, Andel bordsyta med duk = D, Andel bordsyta utan duk = B, d + b = t, t / d = 1 / D , t  / b = 1 / B Vi behöver kunna beräkna B. Vi kan beräkna B, när vi har en ekvation där B är det enda okända värdet. Påstående (1) ger oss: t = πr² = π20² = 400π, d = 400 b = 400π – 400 Här kan vi se att vi har tillräckligt med information för att kunna beräkna B med hjälp av formeln. t  / b = 1 / B. Ersätter t med 400π och ersätter b med 400π – 400. 400π / (400π – 400) = 1 / B Vi har nu en ekvation som vi kan använda för att beräkna sannolikheten att spelkulan landar utanför duken. Tillräcklig information. Påstående (2) ger oss: Duken är en rätvinklig triangel och att dukens hypotenusa har samma längd som bordets diameter. Vi vet dock inte hur stora kateterna är. Dukens area kan vara som störst om kateterna är lika stora och dukens storlek minskar ju mer kateternas längder skiljer sig. Ej tillräcklig information. Rätt svarsalternativ är A.
+En vinterlördag åker Gunilla skridskor på en frusen sjö. Hur tjock är isen på sjön den lördagen?
+(2) Under vintern blir isen 1 cm tjockare varje vecka.
+(1) Isen är 25 procent tjockare den lördagen än den var en vecka tidigare.
+i (1) men ej i (2)
+i (2) men ej i (1)
+i (1) tillsammans med (2)
+i (1) och (2) var för sig
+ej genom de båda påståendena
+i (1) tillsammans med (2)
+no
+na
+(1)  Eftersom vi inte vet hur tjock isen är veckan innan så går det inte med (1). (2) Nu kan vi med hjälp av (1) ta reda på isens tjocklek eftersom isen bara ökar med 25% en gång, när isen går från 3 cm till 4 cm. Då är alltså isen 4 cm tjock den helgen. Rätt svar C.
