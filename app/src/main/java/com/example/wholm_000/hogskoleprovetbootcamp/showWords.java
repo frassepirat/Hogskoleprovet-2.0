@@ -15,19 +15,29 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.DataInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Random;
 
 /**
@@ -47,6 +57,10 @@ public class showWords extends AppCompatActivity {
     int meaningNum = 0;
     int daysUntilPractice = 0;
 
+    private boolean debug = true;
+
+    String FILENAME = "words_to_learn.txt";
+
     //1 = lätt, 2 = medel, 3 = svår, 0 = inget.
     int selected = 0;
     private String date;
@@ -63,13 +77,21 @@ public class showWords extends AppCompatActivity {
         Button b1 = (Button) findViewById(R.id.good);
         Button b2 = (Button) findViewById(R.id.okay);
         Button b3 = (Button) findViewById(R.id.bad);
+        Button b4 = (Button) findViewById(R.id.debugButton);
 
-        TextView tx1 = (TextView) findViewById(R.id.ordandfork);
+        b4.setVisibility(View.INVISIBLE);
 
+        if(debug){
+            b4.setVisibility(View.VISIBLE);
+        }
 
         //read words and meaning from textfiles.
         //ListView words = (ListView) findViewById(R.id.listView);
-        getWords();
+        try {
+            getWords();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
         int[] zeroWords = new int[dagar.size()];
 
@@ -77,20 +99,18 @@ public class showWords extends AppCompatActivity {
         zeroWords = sortWords(zeroWords);
 
         int numWords = 1;
-        if(zeroWords.length > 20) {
-            numWords = 20;
+        if(zeroWords.length > 10) {
+            numWords = 10;
         } else{
             numWords = zeroWords.length;
         }
 
-        int random_range = zeroWords.length;
-        Random randomizer = new Random();
+
 
         if(numWords != 0){
             for(int i = 0; i < numWords; i++){
-                int choice = randomizer.nextInt(random_range);
-                wordsForToday.add(ord.get(zeroWords[choice]));
-                meaningForToday.add(svar.get(zeroWords[choice]));
+                wordsForToday.add(ord.get(zeroWords[i]));
+                meaningForToday.add(svar.get(zeroWords[i]));
             }
         } else{
             wordsForToday.add("DU KAN ALLA ORD.");
@@ -103,37 +123,79 @@ public class showWords extends AppCompatActivity {
         //if there is less than 20 0's in that file, take new ones from the raw file.
         // http://developer.android.com/guide/topics/data/data-storage.html#filesInternal
 
-
+        TextView tx1 = (TextView) findViewById(R.id.ordandfork);
         tx1.setText(wordsForToday.get(meaningNum));
 
-
-        /*wordChoice = ord.size();
-
-        Random rand = new Random();
-        wordChoice = rand.nextInt(wordChoice);
-
-        tx1.setText(ord.get(wordChoice));
-
-        ArrayList<String> full = new ArrayList<String>();
-
-        /*for(int i = 0; i < ord.size(); i++){
-            if(i < svar.size()) {
-                full.add(ord.get(i) + " - " + svar.get(i));
-
-            }
-        }
-
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, full);
-
-        words.setAdapter(arrayAdapter);
-*/
+        TextView numWordsLeft = (TextView) findViewById(R.id.numWordsLeft);
+        numWordsLeft.setText(Integer.toString(wordsForToday.size() - meaningNum));
     }
-    void getWords(){
+    void getWords() throws FileNotFoundException {
         InputStream is = getResources().openRawResource(R.raw.ordmedfork);
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         String line;
 
+        File file = getFileStreamPath(FILENAME);
 
+       if(file != null || file.exists()) {
+            FileInputStream fstream = openFileInput(FILENAME);
+            DataInputStream in = new DataInputStream(fstream);
+            BufferedReader br = new BufferedReader(new InputStreamReader(in));
+
+            String second_line = "";
+
+            ArrayList<String> priorityWords = new ArrayList<String>();
+
+            try {
+                while ((second_line = br.readLine()) != null) {
+                    priorityWords.add(second_line);
+                    second_line = "";
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            for (int i = 0; i < priorityWords.size(); i++) {
+                String[] buffer = priorityWords.get(i).split("%");
+                //compare with todays date, if it's below or equal to zero read it otherwise do nothing.
+                String[] todays_date = getDate().split("/");
+                String[] prev_date = buffer[3].split("/");
+
+                int numDaysToWait = Integer.parseInt(buffer[2]);
+
+                int pdd = Integer.parseInt(prev_date[0]);
+                int pyy = Integer.parseInt(prev_date[2]);
+                int pmm = Integer.parseInt(prev_date[1]);
+
+                int tdd = Integer.parseInt(todays_date[0]);
+                int tmm = Integer.parseInt(todays_date[1]);
+                int tyy = Integer.parseInt(todays_date[2]);
+
+                int daysSinceLearn = 0;
+
+                if (tyy - pyy > 0) {
+                    daysSinceLearn += (tyy - pyy) * 365;
+                } else if (tmm - pmm > 0) {
+                    daysSinceLearn += (tmm - pmm) * 31;
+                } else if (tdd - pdd > 0) {
+                    daysSinceLearn += tdd - pdd;
+                }
+
+                if (daysSinceLearn >= numDaysToWait) {
+                    ord.add(buffer[0]);
+                    svar.add(buffer[1]);
+                    //-1 gets first priority
+                    dagar.add(-1);
+                }
+
+            }
+            //shuffle all with same seed to get same shuffle.
+            long seed = System.nanoTime();
+            Collections.shuffle(ord, new Random(seed));
+            Collections.shuffle(svar, new Random(seed));
+            Collections.shuffle(dagar, new Random(seed));
+
+
+        }
         try{
             while((line = reader.readLine()) != null){
                 both.add(line);
@@ -143,6 +205,9 @@ public class showWords extends AppCompatActivity {
         }catch (IOException e){
             Log.e("lol", "I got an error", e);
         }
+
+        long seed2 = System.nanoTime();
+        Collections.shuffle(both, new Random(seed2));
 
         for(int i = 0; i < both.size(); i++){
             String[] buffer = both.get(i).split("%");
@@ -159,6 +224,12 @@ public class showWords extends AppCompatActivity {
         int pos = 0;
 
         for(int i = 0; i < dagar.size(); i++){
+            if(dagar.get(i) == -1){
+                zeroWords[pos] = i;
+                pos++;
+            }
+        }
+        for(int i = 0; i < dagar.size(); i++){
             if(dagar.get(i) == 0){
                 zeroWords[pos] = i;
                 pos++;
@@ -173,9 +244,9 @@ public class showWords extends AppCompatActivity {
         switch(item.getItemId()){
             case android.R.id.home:
                 this.finish();
-                Intent intent = new Intent(this, startScreen.class);
 
-                startActivity(intent);
+                Intent goingBack = new Intent();
+                setResult(RESULT_OK, goingBack);
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -217,24 +288,29 @@ public class showWords extends AppCompatActivity {
 
             tx1.setText("");
 
-            String FILENAME = "words_to_learn.txt";
-            String wordToSave = wordsForToday.get(meaningNum) + "\n";
-            FileOutputStream fos = null;
 
-            try {
-                fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
+            String wordToSave = wordsForToday.get(meaningNum);
 
+            //remove this word from textfile.
+            if(selected != 3) {
+                removeLine(wordToSave, FILENAME);
 
+                OutputStream fos = null;
 
+                try {
+                    fos = new BufferedOutputStream(openFileOutput(FILENAME, Context.MODE_APPEND));
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
 
-            //write word to file or put it in queue
-            if(selected == 1){
-                daysUntilPractice = set_days(1, daysUntilPractice);
+                daysUntilPractice = set_days(selected, daysUntilPractice);
                 String date = getDate();
-                wordToSave.concat("%" + daysUntilPractice + "%");
+
+                //example word = hej%att hälsa%4%20/10/16
+                wordToSave = wordToSave.concat("%" + meaningForToday.get(meaningNum) + "%" + daysUntilPractice + "%" + date + "\n");
+
+
+                //write word to file or put it in queue
                 try {
                     fos.write(wordToSave.getBytes());
                 } catch (FileNotFoundException e) {
@@ -242,15 +318,20 @@ public class showWords extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            } else if(selected == 2){
-
+                fos.close();
+            } else{
+                wordsForToday.add(wordsForToday.get(meaningNum));
+                meaningForToday.add(meaningForToday.get(meaningNum));
             }
-            fos.close();
-
 
             //quit when all words have been learned.
             if(meaningNum < wordsForToday.size() - 1) {
+
                 meaningNum++;
+
+                TextView numWordsLeft = (TextView) findViewById(R.id.numWordsLeft);
+                numWordsLeft.setText(Integer.toString(wordsForToday.size() - meaningNum));
+
                 tx2.setText(wordsForToday.get(meaningNum));
                 warningText.setText("");
                 selected = 0;
@@ -260,6 +341,7 @@ public class showWords extends AppCompatActivity {
             } else{
                 b4.setText("AVSLUTA");
             }
+
         } else{
             warningText.setText("Välj hur bra du kunde ordet.");
         }
@@ -272,7 +354,6 @@ public class showWords extends AppCompatActivity {
         int b = daysUntilPractice;
 
         if(i == 1) {
-
             switch (b) {
                 case 1:
                     b = 3;
@@ -305,7 +386,7 @@ public class showWords extends AppCompatActivity {
                     b = 600;
                     break;
                 default:
-                    b = 0;
+                    b = 2;
                     break;
             }
         } else{
@@ -314,6 +395,40 @@ public class showWords extends AppCompatActivity {
         daysUntilPractice = b;
 
         return daysUntilPractice;
+    }
+
+    public void removeLine(String lineToRemove, String FILENAME) throws IOException {
+        // Thanks to singleshot on stackoverflow for writing this function.
+        // http://stackoverflow.com/questions/1377279/find-a-line-in-a-file-and-remove-it
+
+        File inputFile = getFileStreamPath(FILENAME);
+        OutputStream fos = null;
+
+        try {
+            fos = new BufferedOutputStream(openFileOutput("temp_file.txt", Context.MODE_APPEND));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(new FileReader(inputFile));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        if(fos != null && reader != null) {
+            String currentLine;
+            while ((currentLine = reader.readLine()) != null) {
+                String[] newLine = currentLine.split("%");
+                if (newLine[0].equals(lineToRemove)) continue;
+                fos.write((currentLine + System.getProperty("line.separator")).getBytes());
+            }
+            fos.close();
+            reader.close();
+            File tempFile = getFileStreamPath("temp_file.txt");
+            boolean successful = tempFile.renameTo(inputFile);
+        }
     }
 
     private void goToUrl(String url){
@@ -372,8 +487,16 @@ public class showWords extends AppCompatActivity {
         int mm = c.get(Calendar.MONTH);
         int dd = c.get(Calendar.DAY_OF_MONTH);
 
-        date.concat(Integer.toString(dd) + "/" + Integer.toString(mm) + "/" + Integer.toString(yy));
+        //
+        date = date.concat(Integer.toString(dd) + "/" + Integer.toString(mm + 1) + "/" + Integer.toString(yy));
 
         return date;
+    }
+
+    public void goToAllWords(View view) {
+        Intent getNameScreenIntent;
+        final int result = 1;
+        getNameScreenIntent = new Intent(this, visaOrd.class);
+        startActivityForResult(getNameScreenIntent, result);
     }
 }
