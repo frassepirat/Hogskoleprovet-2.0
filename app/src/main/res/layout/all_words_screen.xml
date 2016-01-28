@@ -1,13 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="match_parent">
 
-    <ListView
-        android:layout_width="fill_parent"
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"/>
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/ordandfork"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="110dp"
+        android:onClick="goToWordDef"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/svar"
+        android:layout_gravity="center_horizontal" />
+
+
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OM"
+            android:id="@+id/aboutBut"
+            android:layout_gravity="center_horizontal"
+            android:onClick="openDialog2"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SVAR"
+            android:id="@+id/svarBut"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:onClick="show_word_def"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lätt"
+            android:id="@+id/good"
+            android:textColor="@color/green"
+            android:onClick="green"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="medel"
+            android:textColor="@color/yellow"
+            android:id="@+id/okay"
+            android:onClick="yellow"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="svår"
+            android:id="@+id/bad"
+            android:textColor="@color/colorAccent"
+            android:onClick="red"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/warningTextWords"
+        android:textColor="@color/colorAccent"
+        android:layout_gravity="center_horizontal" />
+
 
 </LinearLayout>

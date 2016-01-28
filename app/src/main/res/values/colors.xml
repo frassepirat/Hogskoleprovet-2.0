@@ -5,4 +5,6 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#FF4081</color>
     <color name="warning_color">#000000</color>
+    <color name="green">#00FF00</color>
+    <color name="yellow">#FFA500</color>
 </resources>
