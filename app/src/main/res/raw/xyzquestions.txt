@@ -349,3 +349,48 @@ Vilket av följande tal ligger närmast 1?
 no
 na
 Börja med att subtrahera 1 på alla alternativ. 4/5 - 5/5 = -1/5. 5/4 - 4/4 = 1/4. 7/9 - 9/9 = -2/9. 9/7 - 7/7 = 2/7. Vi letar efter det minsta positiva eller största negativa talet av de här 4 talen. Det går att förlänga -1/5 till -2/10 Vilket är är närmare noll än 2/7, -2/9 och 1/4. Svar 4/5 är närmast ett.
+Ett tal i följden 55, 150, 435, 1290, ... bildas genom att föregående tal multipliceras med heltalet x och den erhållna produkten subtraheras med heltalet y. Vad är summan av x och y?
+12
+15
+18
+21
+18
+no
+na
+3 * 55 = 165. 165 - 15 = 150. 15 + 3 = 18.
+Vad gäller för x om x > x²
+x < -1
+-1 < x < 0
+0 < x < 1
+x > 1
+0 < x < 1
+no
+na
+Testa för alla x. Negativt x² blir positivt. x² mellan 0 och 1 blir mindre än x.
+Vad blir (4/8 * 1/2 * 3/4) / (8/2 * 1/2)?
+3/32
+3/16
+3/8
+3/2
+3/32
+no
+na
+4/8 = 1/2. 8/2 = 4. (1/2 * 1/2 * 3/4) / (4 * 1/2) = 1/4. 1/4 * 3/4 = 3/16. 4*1/2 = 2. 3/16 / 2 = 3/32. Svar 3/32
+x > 0 Vad är x om x² = 0,5
+0,25
+0,75
+√2
+1/√2
+1/√2
+no
+na
+x = √(1/2). x = 1/√2. Svar 1/√2
+En mindre kvadrat med sidan x cm är inritad i en större kvadrat. Sidan i den större kvadraten är y cm längre än sidan i den mindre. Hur stor är skillnaden mellan kvadraternas areor?
+(2xy + x²) cm²
+(2xy + y²) cm²
+(y² - 2xy) cm²
+(y² - x²) cm²
+(2xy + y²) cm²
+no
+na
+Stora kvadratens sida är x + y. Arean för den kvadraten är (x + y)² = x² +2xy + y². Arean för den lilla kvadraten är x². Skillnaden i arean är (2xy + y²) cm²

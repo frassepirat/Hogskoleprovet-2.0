@@ -104,8 +104,8 @@ public class firstQuestionScreen extends AppCompatActivity {
             if (mode.equals("xyz")) {
                 is = getResources().openRawResource(R.raw.xyzquestions);
             } else if (mode.equals("kva")) {
-                answers = new String[100][10];
-                numLinesInTxt = 10;
+                answers = new String[100][11];
+                numLinesInTxt = 11;
                 minAnsRange = 3;
                 maxAnsRange = 7;
                 is = getResources().openRawResource(R.raw.kvaquestions);

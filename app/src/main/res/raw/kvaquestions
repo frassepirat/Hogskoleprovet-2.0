@@ -8,7 +8,8 @@ informationen är otillräcklig
 I är lika med II
 no
 na
-Sannolikheten att ett mynts sida hamnar på en viss sida är 1/2 att det sker två gånger är 1/2 * 1/2. Vilken sida den hamnar på två gåner i rad är lika stor som den andra sidan.
+Sannolikheten att ett mynts sida hamnar på en viss sida är 1/2, att det sker två gånger är 1/2 * 1/2. Vilken sida den hamnar på två gånger i rad är lika stor som den andra sidan.
+Kvantitativ
 Kvantitet I: 0,99^99
 Kvantitet II: 1,1^11
 I är större än II
@@ -18,7 +19,8 @@ informationen är otillräcklig
 II är större än I
 no
 na
-x = y + z + w | w = z + y + x
+Kva I: 0,99 * 0,99 < 0,99 Kva II: 1,1 * 1,1 > 1,1. Alltså är kva II större än I.
+Första Ekvation: x = y + z + w Andra Ekvation: w = z + y + x
 Kvantitet I: y
 Kvantitet II: z
 I är större än II
@@ -28,6 +30,7 @@ informationen är otillräcklig
 informationen är otillräcklig
 no
 na
+sätt in w i ekvation ett. x = y + z + z + y + x. 0 = 2y + 2z. Både 2z och 2y kan antingen vara positiva eller negativa vilket visar att informationen är otillräcklig.
 x > 1
 Kvantitet I: (x^3)^2
 Kvantitet II: x^5
@@ -38,6 +41,8 @@ informationen är otillräcklig
 I är större än II
 no
 na
+Enligt potenslagen om multiplikation så blir (x^3)^2 = x^6 vilket är mer än x^5.
+Kvantitativ
 Kvantitet I: 15 * 36 + 15 * 64
 Kvantitet II: 1501
 I är större än II
@@ -48,6 +53,7 @@ II är större än I
 no
 na
 15 * 36 = 10 * 36 + 5 * 36 = 360 + 180. = 540. 15 * 64 = 10 * 64 + 5 * 64 = 640 + 320 = 960. 540 + 960 = 1500. II är större än I
+Kvantitativ
 Kvantitet I: Diagonalen i rektangeln ABCD
 Kvantitet II: Halva omkretsen i rektangeln ABCD
 I är större än II
@@ -58,7 +64,8 @@ II är större än I
 no
 na
 Anta att längden A = längden B och längden C = längden D. Diagonalen är då enligt pythagoras sats √(A² + C²) = D. Halva Omkretsen är ena sidan plus den andra alltså A + C. Diagonalen är alltid kortare än Halva omkretsen. Alltså II är större än I.
-I en låda finns endast blå röda och gula bollar 1/3 av bollarna är blå och 1/6 av bollarna är röda. En boll dras slumpmässigt. Kvantitet I: Sannolikheten att den dragna bollen är gul.
+I en låda finns endast blå röda och gula bollar 1/3 av bollarna är blå och 1/6 av bollarna är röda. En boll dras slumpmässigt.
+Kvantitet I: Sannolikheten att den dragna bollen är gul.
 Kvantitet II: Sannolikheten att den dragna bollen är blå eller röd.
 I är större än II
 II är större än I
@@ -68,7 +75,8 @@ I är lika med II
 no
 na
 Totalt antal bollar = 1 = 1/3 + 1/6 + x. Ge en gemensam nämnare. 2/6 + 1/6 = 3/6. Antal gula är då 1 - 3/6 = 3/6. 3/6 = 3/6 Alltså är I lika med II
-8x + 4 = 10. Kvantitet I: 4x + 2
+8x + 4 = 10
+Kvantitet I: 4x + 2
 Kvantitet II: 8 - 10 / 4
 I är större än II
 II är större än I
@@ -78,7 +86,8 @@ II är större än I
 no
 na
 Börja med att räkna ut x. 8x + 4 = 10. 8x = 6. x = 6/8. x = 3/4. Kvantitet I = 4 * 3/4 + 2 = 12 / 4 + 2 = 5. Kvantitet II = 8 - 2 - 1/2 = 5,5. II är större än I
-a < b. Kvantitet I: Avståndet mellan origio (0, 0) och (a, b)
+a < b
+Kvantitet I: Avståndet mellan origio (0, 0) och (a, b)
 Kvantitet II: Avståndet mellan origo (0, 0) och (b, a)
 I är större än II
 II är större än I
@@ -88,7 +97,8 @@ I är lika med II
 no
 na
 Avståndet mellan två punkter räknas ut med pythagoras sats. √(a² + b²) = √(b² + a²). I är lika med II.
-L1 och L2 är parallella linjer A, B, C och D är punkter på dessa linjer, AD är längre än AC. Kvantitet I: Arean av triangeln ABC
+L1 och L2 är parallella linjer A, B, C och D är punkter på dessa linjer, AD är längre än AC.
+Kvantitet I: Arean av triangeln ABC
 Kvantitet II: Arean av triangeln ABD
 I är större än II
 II är större än I
@@ -98,7 +108,8 @@ I är lika med II
 yes
 triangel_linjer
 Arean av en triangel räknas ut genom basen gånger höjden delat på två. b * h / 2. Eftersom basen och höjden är samma på båda trianglarna så är arean den samma. Alltså I är lika med II.
-k, m och n är heltal. 0 < k < m < n. Kvantitet I: m/n
+k, m och n är heltal. 0 < k < m < n
+Kvantitet I: m/n
 Kvantitet II: k/m
 I är större än II
 II är större än I
@@ -108,7 +119,8 @@ Informationen är otillräcklig
 no
 na
 Eftersom vi inte vet hur mycket följden ökar med så går det inte att vet vilken kvantitet som är störst.
-x > 0. Kvantitet I: x^1/4
+x > 0
+Kvantitet I: x^1/4
 Kvantitet II: √√x
 I är större än II
 II är större än I
@@ -118,7 +130,8 @@ I är lika med II
 no
 na
 √x = x^1/2. √x^1/2 = x^1/4. Kva I = Kva II.
-x och y är positiva heltal. 5x + 10y = 270 580. Kvantitet I: största möjliga värdet på x.
+x och y är positiva heltal. 5x + 10y = 270 580.
+Kvantitet I: största möjliga värdet på x.
 Kvantitet II: Största möjliga värdet på y.
 I är större än II
 II är större än I
@@ -128,3 +141,91 @@ I är större än II
 no
 na
 Största möjliga värdet på x är när y = 1. Största möjliga värdet på y är när x = 1. 5 måste multipliceras dubbelt så många gånger för att nå 270 580 än vad 10 måste därför är största värdet på x större än största värdet på y.
+x = -2
+Kvantitet II: x + x
+Kvantitet I: x * x
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är större än II
+no
+na
+x * x = -2 * -2 = 4. x + x = -2 -2 = -4. 4 är större än -4. alltså Kva 1.
+Anna är idag 4 år äldre än Bea var för 2 år sedan
+Kvantitet II: Beas ålder idag
+Kvantitet I: Annas ålder för 2 år sedan
+I är större Ã¤n II
+II är större Ã¤n I
+I är lika med II
+Informationen är otillräcklig
+I är lika med II
+no
+na
+Annas ålder = A. Beas ålder = B. A = B - 2 + 4. A = B + 2. Beas ålder Idag = B. Annas ålder för två år sedan = B.
+a < b
+Kvantitet II: (a + b)(a - b)
+Kvantiet 1: a² - b²
+I är större än II
+II är större än I
+I är lika med II
+Informationen Ã¤r otillrÃ¤cklig
+I är lika med II
+no
+na
+(a + b)(a - b) = a² - ab + ba - b² = a² - b². II är lika med II.
+I triangeln ABC har sidorna AB och BC båda längden 7 cm. Höjden från basen AC är 4 cm.
+Kvantitet II: 12 cm
+Kvantiet 1: Längden av sidan AC
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+II är större än I
+no
+na
+Vi kan dela upp triangeln i två rätvinkliga och använda oss av pythagoras sats. 7² = 4² + AC/2. 49 = 16 + AC/2. Eftersom AC är kvantitet I så kan vi jämföra med halva längden av kvantitet II för att se vilken kvantitet som är störst. 4² +(12/2)². Upphöjer 16 + 36 = 52. 52 > 49 Kvant II är större.
+1/y < 0
+Kvantitet II: y
+Kvantitet I: 0
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är större än II
+no
+na
+För att 1/y ska bli mindre än 0 så måste y vara mindre än 0. Alltså är y < 0 och kvantitet I är större än kvantitet II.
+Funktionen f ges av f(x) = 3x + 1
+Kvantitet II: 3
+Kvantitet I: f(a) - f(a + 1)
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+II är större än I
+no
+na
+Sätt in a och a + 1. f(a) = 3a + 1. f(a + 1) = 3(a + 1) + 1. 3a + 1 - (3a + 4) = 1 - 4 = -3.
+Kva
+Kvantitet II: Medelvärdet av (4x + 2z + 94) och (5y + 51)
+Kvantitet I: Medelvärdet av (3x + 4y + z + 38) och (x + y + z + 94)
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+II är större än I
+no
+na
+Kvantitet I: 3x + 4y + z + 38 + x + y + z + 94 = 4x + 5y + 2z + 132. Kvantitet II: 4x + 2z + 94 + 5y + 51 = 4x + 2z + 145 + 5y. Dela båda med 2. Resterna blir 132/2 och 145/2. 145/2 > 132/2 Svar Kva Ii är större än I.
+I triangeln ABC gäller att x > y > z
+Kvantitet II: 120°
+Kvantitet I: x + z
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+Informationen är otillräcklig
+yes
+bild34
+x + y + z = 180. om y är större än 62° så är x + y mindre än 120° annars ej. Svaret är att info är otillräcklig

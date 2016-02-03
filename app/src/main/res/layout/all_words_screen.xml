@@ -4,19 +4,7 @@
     android:layout_height="match_parent">
 
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="12"
-            android:id="@+id/numWordsLeft"
-            android:layout_margin="10dp"/>
-    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,7 +13,7 @@
         android:text="Large Text"
         android:id="@+id/ordandfork"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         android:onClick="goToWordDef"/>
 
     <TextView
@@ -36,7 +24,13 @@
         android:layout_gravity="center_horizontal" />
 
 
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:id="@+id/numWordsLeft"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="240dp"/>
 
 
     <LinearLayout
@@ -44,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="250dp">
+        >
 
         <Button
             android:layout_width="wrap_content"

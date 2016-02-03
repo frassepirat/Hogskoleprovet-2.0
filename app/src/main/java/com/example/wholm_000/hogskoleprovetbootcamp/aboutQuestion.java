@@ -64,6 +64,7 @@ public class aboutQuestion extends AppCompatActivity {
             } else{
                 img.setBackgroundResource(0);
             }
+            tx2.setText(answers[orderOfQuestions[questionNum - 1]][10]);
         } else if(mode.equals("nog")){
         tx1.setText(questionNum + ". " + answers[orderOfQuestions[questionNum - 1]][0]
                 + "\n\n" + answers[orderOfQuestions[questionNum - 1]][1]

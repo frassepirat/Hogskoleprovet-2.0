@@ -52,6 +52,7 @@ public class showWords extends AppCompatActivity {
 
     ArrayList<String> wordsForToday = new ArrayList<String>();
     ArrayList<String> meaningForToday = new ArrayList<String>();
+    ArrayList<Integer> dagarForToday = new ArrayList<Integer>();
 
     int wordChoice;
     int meaningNum = 0;
@@ -74,9 +75,7 @@ public class showWords extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
 
-        Button b1 = (Button) findViewById(R.id.good);
-        Button b2 = (Button) findViewById(R.id.okay);
-        Button b3 = (Button) findViewById(R.id.bad);
+
         Button b4 = (Button) findViewById(R.id.debugButton);
 
         b4.setVisibility(View.INVISIBLE);
@@ -92,6 +91,8 @@ public class showWords extends AppCompatActivity {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
+
 
         int[] zeroWords = new int[dagar.size()];
 
@@ -111,11 +112,30 @@ public class showWords extends AppCompatActivity {
             for(int i = 0; i < numWords; i++){
                 wordsForToday.add(ord.get(zeroWords[i]));
                 meaningForToday.add(svar.get(zeroWords[i]));
+                dagarForToday.add(dagar.get(zeroWords[i]));
             }
         } else{
             wordsForToday.add("DU KAN ALLA ORD.");
             meaningForToday.add("BRA JOBBAT! KOM TILLBAKA IMORGON.");
+            dagarForToday.add(600);
         }
+
+
+        //set button numbers to days it will add.
+        Button b1 = (Button) findViewById(R.id.good);
+        Button b2 = (Button) findViewById(R.id.okay);
+        Button b3 = (Button) findViewById(R.id.bad);
+
+        int numDaysToWait = dagarForToday.get(0);
+
+        int b1Increase = set_days(1, numDaysToWait);
+        int b2Increase = set_days(2, numDaysToWait);
+        int b3Increase = set_days(3, numDaysToWait);
+
+        b1.setText("LÄTT(" + b1Increase + ")");
+        b2.setText("MEDEL(" + b2Increase + ")");
+        b3.setText("SVÅR(" + b3Increase + ")");
+
 
 
         //TODO: Write current date + diffcullty level to a new textfile in internal storage.
@@ -160,8 +180,6 @@ public class showWords extends AppCompatActivity {
                 String[] todays_date = getDate().split("/");
                 String[] prev_date = buffer[3].split("/");
 
-                int numDaysToWait = Integer.parseInt(buffer[2]);
-
                 int pdd = Integer.parseInt(prev_date[0]);
                 int pyy = Integer.parseInt(prev_date[2]);
                 int pmm = Integer.parseInt(prev_date[1]);
@@ -180,12 +198,15 @@ public class showWords extends AppCompatActivity {
                     daysSinceLearn += tdd - pdd;
                 }
 
+                int numDaysToWait = Integer.parseInt(buffer[2]);
+
                 if (daysSinceLearn >= numDaysToWait) {
                     ord.add(buffer[0]);
                     svar.add(buffer[1]);
                     //-1 gets first priority
-                    dagar.add(-1);
+                    dagar.add(Integer.parseInt(buffer[2]));
                 }
+
 
             }
             //shuffle all with same seed to get same shuffle.
@@ -214,8 +235,11 @@ public class showWords extends AppCompatActivity {
 
             ord.add(buffer[0]);
             svar.add(buffer[1]);
-            dagar.add(Integer.parseInt((buffer[2])));
+            dagar.add(-1);
         }
+
+
+
 
 
     }
@@ -224,13 +248,13 @@ public class showWords extends AppCompatActivity {
         int pos = 0;
 
         for(int i = 0; i < dagar.size(); i++){
-            if(dagar.get(i) == -1){
+            if(dagar.get(i) != -1){
                 zeroWords[pos] = i;
                 pos++;
             }
         }
         for(int i = 0; i < dagar.size(); i++){
-            if(dagar.get(i) == 0){
+            if(dagar.get(i) == -1){
                 zeroWords[pos] = i;
                 pos++;
             }
@@ -281,12 +305,12 @@ public class showWords extends AppCompatActivity {
             startActivity(intent);
         } else if(b4.getText().equals("SVAR")) {
             b4.setText("NÄSTA");
-
             tx1.setText(meaningForToday.get(meaningNum));
         } else if(selected != 0){
+
+
             b4.setText("SVAR");
 
-            tx1.setText("");
 
 
             String wordToSave = wordsForToday.get(meaningNum);
@@ -320,9 +344,14 @@ public class showWords extends AppCompatActivity {
                 }
                 fos.close();
             } else{
+                dagarForToday.add(0);
                 wordsForToday.add(wordsForToday.get(meaningNum));
                 meaningForToday.add(meaningForToday.get(meaningNum));
             }
+
+
+
+            tx1.setText("");
 
             //quit when all words have been learned.
             if(meaningNum < wordsForToday.size() - 1) {
@@ -340,8 +369,16 @@ public class showWords extends AppCompatActivity {
                 b3.setTextColor(getResources().getColor(R.color.colorAccent));
             } else{
                 b4.setText("AVSLUTA");
+                tx1.setText(meaningForToday.get(meaningNum));
             }
+            daysUntilPractice = dagarForToday.get(meaningNum);
+            int b1Increase = set_days(1, daysUntilPractice);
+            int b2Increase = set_days(2, daysUntilPractice);
+            int b3Increase = set_days(3, daysUntilPractice);
 
+            b1.setText("LÄTT(" + b1Increase + ")");
+            b2.setText("MEDEL(" + b2Increase + ")");
+            b3.setText("SVÅR(" + b3Increase + ")");
         } else{
             warningText.setText("Välj hur bra du kunde ordet.");
         }
@@ -356,6 +393,9 @@ public class showWords extends AppCompatActivity {
         if(i == 1) {
             switch (b) {
                 case 1:
+                    b = 3;
+                    break;
+                case 2:
                     b = 3;
                     break;
                 case 3:
@@ -386,11 +426,13 @@ public class showWords extends AppCompatActivity {
                     b = 600;
                     break;
                 default:
-                    b = 2;
+                    b = 1;
                     break;
             }
-        } else{
+        } else if(i == 2){
             b = 1;
+        } else{
+            b = 0;
         }
         daysUntilPractice = b;
 
