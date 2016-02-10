@@ -41,9 +41,9 @@
         >
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="VISA"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:text="lätt"
             android:id="@+id/debugButton"
             android:onClick="goToAllWords"/>
 

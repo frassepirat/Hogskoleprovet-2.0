@@ -58,7 +58,7 @@ public class showWords extends AppCompatActivity {
     int meaningNum = 0;
     int daysUntilPractice = 0;
 
-    private boolean debug = true;
+    private boolean debug = false;
 
     String FILENAME = "words_to_learn.txt";
 
@@ -156,7 +156,7 @@ public class showWords extends AppCompatActivity {
 
         File file = getFileStreamPath(FILENAME);
 
-       if(file != null || file.exists()) {
+       if(file.exists()) {
             FileInputStream fstream = openFileInput(FILENAME);
             DataInputStream in = new DataInputStream(fstream);
             BufferedReader br = new BufferedReader(new InputStreamReader(in));
@@ -279,7 +279,7 @@ public class showWords extends AppCompatActivity {
     public void openDialog2(View view) {
         AlertDialog.Builder dlgAlert = new AlertDialog.Builder(this);
         dlgAlert.setMessage("Läs ordet och tänk vad du tror att det är. Tryck sedan på svar och se om du gissade rätt." +
-                "Välj sedan hur bra du kunde ordet och spela vidare. Träna varje dag för att lära dig orden.");
+                "Välj hur bra du kunde ordet och spela vidare. Träna varje dag för att lära dig orden.");
         dlgAlert.setTitle("Om Ord");
         dlgAlert.setNegativeButton("Ok", null);
         dlgAlert.setCancelable(true);
@@ -307,11 +307,7 @@ public class showWords extends AppCompatActivity {
             b4.setText("NÄSTA");
             tx1.setText(meaningForToday.get(meaningNum));
         } else if(selected != 0){
-
-
             b4.setText("SVAR");
-
-
 
             String wordToSave = wordsForToday.get(meaningNum);
 
@@ -326,6 +322,8 @@ public class showWords extends AppCompatActivity {
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
+
+                daysUntilPractice = dagarForToday.get(meaningNum);
 
                 daysUntilPractice = set_days(selected, daysUntilPractice);
                 String date = getDate();

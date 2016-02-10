@@ -46,6 +46,8 @@ public class visaOrd extends AppCompatActivity {
         ArrayList<String> priorityWords = new ArrayList<String>();
         ListView lv = (ListView) findViewById(R.id.listView);
 
+        priorityWords.add("debug_mode");
+
         try {
             while ((second_line = br.readLine()) != null) {
                 priorityWords.add(second_line);
