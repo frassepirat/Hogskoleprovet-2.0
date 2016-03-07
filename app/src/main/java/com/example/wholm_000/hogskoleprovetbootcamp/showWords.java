@@ -224,7 +224,7 @@ public class showWords extends AppCompatActivity {
             }
             line = "";
         }catch (IOException e){
-            Log.e("lol", "I got an error", e);
+            //Log.e("lol", "I got an error", e);
         }
 
         long seed2 = System.nanoTime();

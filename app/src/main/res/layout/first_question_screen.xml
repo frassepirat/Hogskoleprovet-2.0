@@ -105,16 +105,16 @@
         android:orientation="horizontal"
         android:layout_gravity="center">
         <Button
-            android:layout_width="65dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:text="Note"
+            android:text="Anteckna"
             android:id="@+id/notes"
             android:layout_gravity="center_horizontal"
             android:onClick="getToNotes"/>
         <Button
-            android:layout_width="65dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Om"
+            android:text=""
             android:id="@+id/aboutQuestion2"
             android:layout_gravity="center"
             android:onClick="getToAbout2"/>

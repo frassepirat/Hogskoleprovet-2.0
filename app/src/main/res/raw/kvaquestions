@@ -229,3 +229,322 @@ Informationen är otillräcklig
 yes
 bild34
 x + y + z = 180. om y är större än 62° så är x + y mindre än 120° annars ej. Svaret är att info är otillräcklig
+a > 0, b > 0 och c < 0. a = b + c
+Kvantitet II: b
+Kvantitet I: a
+I är större än II
+II är större än I
+I är lika med II
+Informationene är otillräcklig
+Informationene är otillräcklig
+no
+na
+c är negativ. b som är positivt + c som är negativt blir tillsammans a som är positivt. Alltså är a + c > 0. Längre kommer vi inte alltså är informationen otillräcklig.
+n >= 0, m >= 0, n och m är heltal.
+Kvantitet II: m^(n+1)
+Kvantitet I: (n + 1)^m
+I är större än II
+II är större än I
+I är lika med II
+Informationene är otillräcklig
+I är lika med II
+no
+na
+Rätt svar är C.
+kvantitativ
+Kvantitet I: 69 * 116
+Kvantitet II: 68 * 117
+I är större än II
+II är större än I
+I är lika med II
+Informationene är otillräcklig
+I är större än II
+no
+na
+null
+x < y
+KVantitet II: 4 - y
+Kvantitet I: 4 - x
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+Informationen är otillräcklig
+no
+na
+null
+x, y och z är tre på varandra följande heltal och xyz = 0
+KVantitet II: z
+Kvantitet I: 0
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+Informationen är otillräcklig
+no
+na
+null
+Kvantitativ
+Kvantitet II: Arean av det skuggade området
+Kvantitet I: Den sammanlagda arean av de två mindre cirklarna
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är lika med II
+yes
+ht2012kva3
+null
+Ett 10 meter långt snöre delas i fyra bitar; tre långa och en kortare bit.
+Kvantitet II: 3 meter
+Kvantitet I: Längden på en av de tre bitar som är lika långa
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+Informationen är otillräcklig
+no
+na
+null
+a = 2b, b = 3c
+Kvantitet II: 10c
+Kvantitet I: a + b + c
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är lika med II
+no
+na
+null
+x är 80 % av 60, 35 är 70 % av y
+Kvantitet II: y
+Kvantitet I: x
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+II är större än I
+no
+na
+null
+Funktionen g ges av g(x) = 4 - x²
+Kvantitet II: g(-4)
+Kvantitet I: g(4)
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är lika med II
+no
+ht2012kva3
+null
+ABCD är en kvadrat och CDE är en liksidig triangel. Arean ABCD är 36 cm².
+Kvantitet II: 30 cm
+Kvantitet I: Omkretsen av femhörningen ABCED
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är lika med II
+yes
+ht2012kva8
+null
+m = 3x/4, n = 4x/3
+Kvantitet II: mn
+Kvantitet I: x²
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är lika med II
+no
+na
+null
+Fem olika positiva heltal har medelvärdet 12 och medianen 15.
+Kvantitet II: 27
+Kvantitet I: Största möjliga värdet på det största av talen
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+II är större än I
+no
+na
+null
+x och y är positiva heltal. xy = 42 och x² + y² = 85
+Kvantitet II: y
+Kvantitet I: x
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+Informationen är otillräcklig
+no
+na
+null
+ABC är en triangel där vinkeln BAC är 60º och AB = AC = 9 cm.
+Kvantitet II: 30 cm
+Kvantitet I: Omkretsen av triangeln ABC
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+II är större än I
+yes
+ht2012kva12
+null
+x ≠ 0, x/13 = x/(y + 2)
+Kvantitet II: 13
+Kvantitet I: y
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+II är större än I
+no
+na
+null
+y > 0, x = 2y
+Kvantitet II: 2x - 4y
+Kvantitet I: x - y
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är större än II
+no
+na
+null
+Figuren nedan visar en cirkel som är indelad i sju cirkelsektorer.
+Kvantitet II: 50º
+Kvantitet I: Medelvärdet av cirkelsektorernas medelpunktsvinklar
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är större än II
+yes
+ht2012kva15
+null
+Linjen L₁, går genom punkten A = (-3,-3) och punkten B = (5,3). Linjen L₂ skär linjen L₁ någonstans mellan A och B. Linjen L₁ skär y-axeln i punkten (0,y₁). Linjen L₂ skär y-axeln i punkten (0,y₂).
+Kvantitet II: y₂
+Kvantitet I: y₁
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+Informationen är otillräcklig
+yes
+ht2012kva16
+null
+k > 0
+Kvantitet II: 2(3k)/6
+Kvantitet I: ((k · (1/2))/3) · 6
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är lika med II
+no
+na
+null
+ABC är en triangel.
+Kvantitet II: y
+Kvantitet I: x
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är större än II
+yes
+ht2012kva18
+null
+Kvantitativ
+Kvantitet II: 3^(x-1) / 3^(x-2)
+Kvantitet I: 3^x / 3^(x-1)
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är lika med II
+no
+ht2012kva18
+null
+Kvantitativ
+Kvantitet I: 69 * 116
+Kvantitet II: 68 * 117
+I är större än II
+II är större än I
+I är lika med II
+Informationene är otillräcklig
+I är större än II
+no
+na
+null
+x < y
+KVantitet II: 4 - y
+Kvantitet I: 4 - x
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är större än II
+no
+na
+null
+x, y och z är tre på varandra följande heltal och xyz = 0
+KVantitet II: z
+Kvantitet I: 0
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+Informationen är otillräcklig
+no
+na
+null
+På ett bord finns två bollar, en röd och en vit. Det finns även sex lådor som är placerade i rad.
+Kvantitet II: 12
+Kvantitet I: Antalet sätt att placera de två bollarna i lådorna så att det alltid finns minst en tom låda mellan bollarna. Den röda bollen ska placeras till vänster om den vita bollen.
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+II är större än I
+no
+na
+test
+Kvantitativ
+Kvantitet II: Avståndet mellan punkten (3, 4) och punkten (-21, y)
+Kvantitet I: Avståndet mellan punkten (-4, y) och punkten (22, y)
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är större än II
+no
+na
+test
+Två cirklar med olika stora radier skär varandra i två punkter.
+Kvantitet II: Avståndet mellan cirklarnas medelpunkter
+Kvantitet I: Radien av den större cirkeln
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+Informationen är otillräcklig
+no
+na
+test
+Kvantitativ
+Kvantitet II: 8
+Kvantitet I: En åttondel av 2^6
+I är större än II
+II är större än I
+I är lika med II
+Informationen är otillräcklig
+I är lika med II
+no
+na
+test

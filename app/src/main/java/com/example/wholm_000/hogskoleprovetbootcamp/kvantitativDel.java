@@ -54,6 +54,9 @@ public class kvantitativDel extends AppCompatActivity {
             elf.setText("elf");
             mek.setText("mek");
 
+            elf.setVisibility(View.INVISIBLE);
+            mek.setVisibility(View.INVISIBLE);
+
             subTitle.setText(R.string.subTitleVerbala);
 
             //ord.setEnabled(false);

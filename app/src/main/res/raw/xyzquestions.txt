@@ -394,3 +394,57 @@ En mindre kvadrat med sidan x cm är inritad i en större kvadrat. Sidan i den s
 no
 na
 Stora kvadratens sida är x + y. Arean för den kvadraten är (x + y)² = x² +2xy + y². Arean för den lilla kvadraten är x². Skillnaden i arean är (2xy + y²) cm²
+Då det positiva heltalet x divideras med 8 erhålls resten 2. Vad blir resten då (x + 9) divideras med 8?
+1
+2
+3
+4
+3
+no
+na
+x % 8 = 2. anta att x är 10. 10 + 9 = 19 /8 har resten 3. Svar = 3.
+I en grupp på 30 personer är förhållandet mellan antalet män och antalet kvinnor 3:2. Hur många i gruppen är kvinnor?
+6
+10
+12
+15
+12
+no
+na
+Varje enhet är 30/5 stor. 30/5 = 6. 6*1 = 12. Det finns 12 kvinnor.
+Om x = 3, vad är då x³(x³ - x²)?
+27
+81
+486
+18 954
+486
+no
+na
+null
+x³(x³ - x²) ersätter x med 3. 27(27 - 9) = 27 * 18. Avrunda till 25 * 20 = 500, typ 486.Lös ut b ur formeln a(b - 1) = c
+b = c/a + 1
+b = c/a - 1
+b = (c + 1)/a
+b = (c - 1)/a
+b = c/a + 1
+no
+na
+a(b - 1) = c. Dela båda sidor med a. b -  1 = c/a. Addera 1 på båda sidor. b = c/a + 1
+Vilken funktion visar volymen L vid tiden t?
+L = 6t + 19
+L = 6t - 19
+L = -6t + 19
+L = -6t - 19
+L = -6t + 19
+no
+literT
+Vi testar de olika funktionerna. Vi kan direkt ta bort 6t - 19 och L = -6t - 19 eftersom när t = 0 så är L = 19. Vi kan också ta bort L = 6t + 19 då när t är 1 så är liter minder än 19. Alltså är L = -6t + 19 rätt svar.
+Kuben K1 har volymen x cm³. Sidan i kuben K2 är tre gånger så lång som sidan i kuben K1. Hur många kuber K1 motsvarar volymen av kuben K2?
+9
+12
+24
+27
+27
+no
+na
+K1 = x cm³. Sidan i K1 är x cm. Sidan i K2 är 3x cm. Volymen i K2 är (3x)³ cm. alltså 27x cm³. Svar 27 kuber.
